@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-CN">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +13,13 @@
 <meta name="theme-color" content="#222">
 
 
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -79,18 +86,18 @@
 
 
 
-<meta name="description" content="vue-electron 伪造请求头简介 使用 jsonp 接口时，referer 属性可以提供接口域名进行限制访问。 因为 web 安全限制，浏览器不允许发送请求时直接设置 referer   和  host  示例QQ音乐 歌词数据接口： GET：https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg 参数：songmid  歌曲 m">
+<meta name="description" content="vue-electron 伪造请求头简介 使用 jsonp 接口时，referer 属性可以提供接口域名进行限制访问。 web 安全限制，浏览器不允许发送请求时直接设置 referer   和  host  示例QQ音乐 歌词数据接口： GET：https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg 参数：songmid  歌曲 mid，">
 <meta name="keywords" content="跨域,伪造请求头">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue-electron">
 <meta property="og:url" content="https://qiwang97.github.io/2019/03/11/vue-electron跨域/index.html">
 <meta property="og:site_name" content="小柒的博客">
-<meta property="og:description" content="vue-electron 伪造请求头简介 使用 jsonp 接口时，referer 属性可以提供接口域名进行限制访问。 因为 web 安全限制，浏览器不允许发送请求时直接设置 referer   和  host  示例QQ音乐 歌词数据接口： GET：https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg 参数：songmid  歌曲 m">
+<meta property="og:description" content="vue-electron 伪造请求头简介 使用 jsonp 接口时，referer 属性可以提供接口域名进行限制访问。 web 安全限制，浏览器不允许发送请求时直接设置 referer   和  host  示例QQ音乐 歌词数据接口： GET：https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg 参数：songmid  歌曲 mid，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-11T13:56:29.820Z">
+<meta property="og:updated_time" content="2019-03-11T20:24:23.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-electron">
-<meta name="twitter:description" content="vue-electron 伪造请求头简介 使用 jsonp 接口时，referer 属性可以提供接口域名进行限制访问。 因为 web 安全限制，浏览器不允许发送请求时直接设置 referer   和  host  示例QQ音乐 歌词数据接口： GET：https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg 参数：songmid  歌曲 m">
+<meta name="twitter:description" content="vue-electron 伪造请求头简介 使用 jsonp 接口时，referer 属性可以提供接口域名进行限制访问。 web 安全限制，浏览器不允许发送请求时直接设置 referer   和  host  示例QQ音乐 歌词数据接口： GET：https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg 参数：songmid  歌曲 mid，">
 
 
 
@@ -98,9 +105,9 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -231,6 +238,26 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-站点">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-baidusitemap">
+          <a href="/baidusitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            baidusitemap
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -358,7 +385,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  
+                  1.5k 字
                 </span>
               
 
@@ -374,7 +401,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  
+                  7 分钟
                 </span>
               
             </div>
@@ -397,12 +424,13 @@
       
         <h2 id="vue-electron-伪造请求头"><a href="#vue-electron-伪造请求头" class="headerlink" title="vue-electron 伪造请求头"></a>vue-electron 伪造请求头</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><ul>
 <li>使用 <code>jsonp</code> 接口时，<code>referer</code> 属性可以提供接口域名进行限制访问。</li>
-<li>因为 web 安全限制，浏览器不允许发送请求时直接设置 <code>referer</code>   和  <code>host</code></li>
+<li>web 安全限制，浏览器不允许发送请求时直接设置 <code>referer</code>   和  <code>host</code></li>
 </ul>
 <h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p>QQ音乐 歌词数据接口：</p>
 <p><code>GET：https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg</code></p>
 <p>参数：<code>songmid</code>  歌曲 mid，示例使用 <code>004aHCfZ3VDYG3</code></p>
-<p>请求头：<code>&quot;Host&quot;: &quot;c.y.qq.com&quot;，&quot;Referer&quot;: &quot;https://y.qq.com/portal/player.html&quot;</code></p>
+<p>请求头：   <code>&quot;Host&quot;: &quot;c.y.qq.com&quot;，</code></p>
+<p>​            <code>&quot;Referer&quot;: &quot;https://y.qq.com/portal/player.html&quot;</code></p>
 <h4 id="知识清单"><a href="#知识清单" class="headerlink" title="知识清单"></a>知识清单</h4><ul>
 <li>axios</li>
 <li>electron </li>
@@ -612,6 +640,24 @@
 
           
           
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liaoxuefeng.com/" title="廖雪峰" target="_blank">廖雪峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
           
 
@@ -655,19 +701,6 @@
   <span class="author" itemprop="copyrightHolder">Xiao Qi</span>
 
   
-
- <!-- -->
-
-<!-- 
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count"></span>
-  
 </div>
 
 
@@ -679,7 +712,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -696,11 +729,13 @@
 
         
       </div>
-    </div></footer>
+    </footer>
 
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -875,5 +910,5 @@
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"tagMode":false});</script></body>
 </html>
