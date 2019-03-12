@@ -94,13 +94,13 @@
 <meta property="og:site_name" content="小柒的博客">
 <meta property="og:description" content="js 跨域方法简介“同源策略”，即同域名(domain或ip)、同端口、同协议的才能互相获取资源，而不能访问其他域的资源。在同源策略影响下，一个域名A的网页可以获取域名B下的脚本,css,图片等，但是不能发送Ajax请求，也不能操作Cookie、LocalStorage等数据 前端跨域方法img可以发送跨域请求，但是无法拿到响应结果 12var img = new Image()img.src =">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://qiwang97.github.io/2019/03/12/js跨域方法/js跨域方法图片/0.jfif">
-<meta property="og:image" content="https://qiwang97.github.io/2019/03/12/js跨域方法/js跨域方法图片/0-1552369506252.jfif">
+<meta property="og:image" content="https://qiwang97.github.io/2019/03/12/js跨域方法/0.jfif">
+<meta property="og:image" content="https://qiwang97.github.io/2019/03/12/js跨域方法/0-1552369506252.jfif">
 <meta property="og:updated_time" content="2019-03-12T05:49:48.488Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js跨域方法">
 <meta name="twitter:description" content="js 跨域方法简介“同源策略”，即同域名(domain或ip)、同端口、同协议的才能互相获取资源，而不能访问其他域的资源。在同源策略影响下，一个域名A的网页可以获取域名B下的脚本,css,图片等，但是不能发送Ajax请求，也不能操作Cookie、LocalStorage等数据 前端跨域方法img可以发送跨域请求，但是无法拿到响应结果 12var img = new Image()img.src =">
-<meta name="twitter:image" content="https://qiwang97.github.io/2019/03/12/js跨域方法/js跨域方法图片/0.jfif">
+<meta name="twitter:image" content="https://qiwang97.github.io/2019/03/12/js跨域方法/0.jfif">
 
 
 
@@ -460,10 +460,10 @@
 </ul>
 <p>3.当发起POST请求时，只允许Content-Type为application/x-www-form-urlencoded,multipart/form-data,text/plain。</p>
 <p>对于简单请求来说，服务器和客户端之间的通信只是进行简单的交换。如图：</p>
-<p><img src="js跨域方法图片/0.jfif" alt="img"></p>
+<p><img src="/2019/03/12/js跨域方法/0.jfif" alt="img"></p>
 <p>浏览器发送一个带有Orgin字段的HTTP请求头，用来表明请求来源。服务器的Access-Control-Allow-Origin响应头表明该服务器允许哪些源的访问，一旦不匹配，浏览器就会拒绝资源的访问。大部分情况，大家都喜欢将Access-Control-Allow-Origin设置为*,即任意外域都能访问该资源。</p>
 <h5 id="非简单请求"><a href="#非简单请求" class="headerlink" title="非简单请求"></a>非简单请求</h5><p>在正式发送请求数据之前，浏览器会先发送一个带有’OPTIONS’方法的请求来确保该请求对于目标站点来说是安全的，这个请求也被称为”预请求“（preflight)。</p>
-<p><img src="js跨域方法图片/0-1552369506252.jfif" alt="img"></p>
+<p><img src="/2019/03/12/js跨域方法/0-1552369506252.jfif" alt="img"></p>
 <p>浏览器会在预检请求中，多发送两个字段Access-Control-Request-Method和Access-Control-Request-Headers,前者用于告知服务器实际请求所用的方法，后者用于告知服务器实际请求所携带的自定义请求首部字段。然后，服务器将根据请求头的信息来判断是否允许该请求。</p>
 <p>针对非简单请求，服务器端可以设置几个相关字段:</p>
 <ul>
