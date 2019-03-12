@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="跨域,js,">
+  <meta name="keywords" content="js,跨域,">
 
 
 
@@ -87,7 +87,7 @@
 
 
 <meta name="description" content="js 跨域方法简介“同源策略”，即同域名(domain或ip)、同端口、同协议的才能互相获取资源，而不能访问其他域的资源。在同源策略影响下，一个域名A的网页可以获取域名B下的脚本,css,图片等，但是不能发送Ajax请求，也不能操作Cookie、LocalStorage等数据 前端跨域方法img可以发送跨域请求，但是无法拿到响应结果 12var img = new Image()img.src =">
-<meta name="keywords" content="跨域,js">
+<meta name="keywords" content="js,跨域">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js跨域方法">
 <meta property="og:url" content="https://qiwang97.github.io/2019/03/12/js跨域方法/index.html">
@@ -422,7 +422,7 @@
 <h4 id="jsonp"><a href="#jsonp" class="headerlink" title="jsonp"></a>jsonp</h4><p>js 使用 XMLHttpRequest 不允许请求不同域的数据，但是允许获取不同域的 js 脚本文件。</p>
 <p>通过 script 标签引入一个 js 文件，该文件载入成功后会执行在 url 参数中指定的函数，并且会把需要的 json 数据作为参数传入。</p>
 <p>原理代码如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// a.html</span><br><span class="line">&lt;script&gt; </span><br><span class="line">	function fn (data)&#123;</span><br><span class="line">    // 处理获得的 json 数据</span><br><span class="line">	&#125;</span><br><span class="line">	var script = document.creatElement(&apos;script&apos;)</span><br><span class="line">  script.src = url+&apos;?callback=fn&apos;   // url 为跨域地址</span><br><span class="line">  document.body.appendChild(script)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 服务器</span><br><span class="line">&lt;?php</span><br><span class="line">$callback = $_GET(&apos;callback&apos;)   // 获取回调函数</span><br><span class="line">$data = array(&apos;a&apos;,&apos;b&apos;)			// 返回的数据</span><br><span class="line">echo $callback.&apos;(&apos;.json_encode(&#123;$data&#125;).&apos;)&apos;;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">// 实际效果</span><br><span class="line">fn([&apos;a&apos;,&apos;b&apos;])</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// a.html</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"> </span></span><br><span class="line"><span class="javascript">	<span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params">data</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 处理获得的 json 数据</span></span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">var</span> script = <span class="built_in">document</span>.creatElement(<span class="string">'script'</span>)</span></span><br><span class="line"><span class="javascript">  script.src = url+<span class="string">'?callback=fn'</span>   <span class="comment">// url 为跨域地址</span></span></span><br><span class="line"><span class="javascript">  <span class="built_in">document</span>.body.appendChild(script)</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 服务器</span><br><span class="line">&lt;?php</span><br><span class="line">$callback = $_GET('callback')   // 获取回调函数</span><br><span class="line">$data = array('a','b')			// 返回的数据</span><br><span class="line">echo $callback.'('.json_encode(&#123;$data&#125;).')';</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">// 实际效果</span><br><span class="line">fn(['a','b'])</span><br></pre></td></tr></table></figure>
 <p>封装：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function jsonp(url,params,callback)&#123;</span><br><span class="line">	var funcName = &apos;jsonp_&apos;+new Date().toString()</span><br><span class="line">  var script = document.creatElement(&apos;script&apos;)</span><br><span class="line">  script.src = url+&apos;?callback=fn&apos;</span><br><span class="line">  document.body.appendChild(script)</span><br><span class="line"></span><br><span class="line">  window[funcName] = function(data) &#123;</span><br><span class="line">    callback(data)</span><br><span class="line">    delete window[funcName]</span><br><span class="line">    document.body.removeChild(script)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>jquery 封装：</p>
@@ -521,9 +521,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/跨域/" rel="tag"><i class="fa fa-tag"></i> 跨域</a>
-          
             <a href="/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
+          
+            <a href="/tags/跨域/" rel="tag"><i class="fa fa-tag"></i> 跨域</a>
           
         </div>
       
@@ -545,6 +545,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/12/js文件拖拽/" rel="prev" title="js文件拖拽">
+                js文件拖拽 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -623,7 +627,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -634,7 +638,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -645,7 +649,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

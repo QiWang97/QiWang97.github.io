@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="笔记,js,es6,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ES6 新增新增类型进制0b 二进制   0八进制  0x十六进制 symbol基本类型，返回值唯一 使用：属性私有化，只读 12345678910111213141516171819202122232425// 原有的私有化方式var Person = (function()&amp;#123;  var _gender = &amp;apos;&amp;apos;;  function P(name,gender)&amp;">
+<meta name="keywords" content="笔记,js,es6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="es6新增">
+<meta property="og:url" content="https://qiwang97.github.io/2019/03/12/es6新增/index.html">
+<meta property="og:site_name" content="小柒的博客">
+<meta property="og:description" content="ES6 新增新增类型进制0b 二进制   0八进制  0x十六进制 symbol基本类型，返回值唯一 使用：属性私有化，只读 12345678910111213141516171819202122232425// 原有的私有化方式var Person = (function()&amp;#123;  var _gender = &amp;apos;&amp;apos;;  function P(name,gender)&amp;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-12T13:03:09.229Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="es6新增">
+<meta name="twitter:description" content="ES6 新增新增类型进制0b 二进制   0八进制  0x十六进制 symbol基本类型，返回值唯一 使用：属性私有化，只读 12345678910111213141516171819202122232425// 原有的私有化方式var Person = (function()&amp;#123;  var _gender = &amp;apos;&amp;apos;;  function P(name,gender)&amp;">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Xiao Qi'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://qiwang97.github.io/2019/03/12/es6新增/">
+
+
+
+
+
+  <title>es6新增 | 小柒的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/QiWang97" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小柒的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-站点">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-baidusitemap">
+          <a href="/baidusitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            baidusitemap
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://qiwang97.github.io/2019/03/12/es6新增/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiao Qi">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/album.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小柒的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">es6新增</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-12T21:01:39+08:00">
+                2019-03-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  2.1k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  10 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="ES6-新增"><a href="#ES6-新增" class="headerlink" title="ES6 新增"></a>ES6 新增</h1><h3 id="新增类型"><a href="#新增类型" class="headerlink" title="新增类型"></a>新增类型</h3><h4 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h4><p><code>0b</code> 二进制   <code>0</code>八进制  <code>0x</code>十六进制</p>
+<h4 id="symbol"><a href="#symbol" class="headerlink" title="symbol"></a>symbol</h4><p>基本类型，返回值唯一</p>
+<p>使用：属性私有化，只读</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">// 原有的私有化方式</span><br><span class="line">var Person = (function()&#123;</span><br><span class="line">  var _gender = &apos;&apos;;</span><br><span class="line">  function P(name,gender)&#123;</span><br><span class="line">    this.name  = name;</span><br><span class="line">    //this.gender = gender;</span><br><span class="line">    _gender = gender;</span><br><span class="line">  &#125;</span><br><span class="line">  P.prototype.getGender = function()&#123;</span><br><span class="line">    return _gender</span><br><span class="line">  &#125;</span><br><span class="line">  return P;</span><br><span class="line">&#125;)();</span><br><span class="line">var p1 = new Person(&apos;hh&apos;,&apos;nan&apos;)  // 此时p1没有gender属性,只能使用get函数得到</span><br><span class="line"></span><br><span class="line">// 新的方法</span><br><span class="line">var Person = (function()&#123;</span><br><span class="line">  let _gender = Symbol(&apos;gender&apos;);</span><br><span class="line">  function P(name,gender)&#123;</span><br><span class="line">    this.name  = name;</span><br><span class="line">    this[_gender] = gender;</span><br><span class="line">  &#125;</span><br><span class="line">  return P;</span><br><span class="line">&#125;)();</span><br><span class="line">var p1 = new Person(&apos;hh&apos;,&apos;nan&apos;)  // 此时p1没有gender属性,只能使用get函数得到</span><br></pre></td></tr></table></figure>
+<h4 id="字符串拓展"><a href="#字符串拓展" class="headerlink" title="字符串拓展"></a>字符串拓展</h4><ul>
+<li><p>Unicode 表示法   <code>{}</code>完整表示</p>
+</li>
+<li><p>(<a href="http://www.unicode.org/" target="_blank" rel="noopener">http://www.unicode.org/</a>)  表情 (<a href="http://www.unicode.org/emoji/charts" target="_blank" rel="noopener">http://www.unicode.org/emoji/charts</a>)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&apos;\u0016&apos;  // a</span><br><span class="line">&apos;\u&#123;1F602&#125;&apos;   // 表情</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>模板字符串   保持字符串格式 （空格和缩进）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = `a</span><br><span class="line"> b   </span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>表达式解析  <code>${}</code>    可以使用在属性里面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = `</span><br><span class="line"> $&#123; 1 + 1&#125;  </span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h4><p>对象的键值只能是字符串；如果不是字符串，会尝试调用对象的 <code>toString</code> 方法</p>
+<p>Map 允许属于各种类型（包括对象）；key 按照添加顺序排列</p>
+<p>可以使用在私有数据保护</p>
+<p>创建： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const map = new Map([</span><br><span class="line">  [&apos;a&apos;:1],[&apos;b&apos;,2]</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+<p>属性：size</p>
+<p>方法：set(key,value)、get、delete、has、clear、keys、values、entries、forEach</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 数据保护</span><br><span class="line">var Person = (function()&#123;</span><br><span class="line">  let _gender = new Map();</span><br><span class="line">  function P(name,gender)&#123;</span><br><span class="line">    this.name  = name;</span><br><span class="line">    _gender.set(this,gender);</span><br><span class="line">  &#125;</span><br><span class="line">  P.prototype.getGender = function()&#123;</span><br><span class="line">    return _gender.get(this)</span><br><span class="line">  &#125;</span><br><span class="line">  return P;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<ul>
+<li>WeakMap  键值必须是对象，弱引用，GC机制不考虑回收问题（new Person 是强引用，两处保存引用）。多用于上述数据保护的垃圾回收</li>
+</ul>
+<h4 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h4><p>集合，唯一值不会重复</p>
+<p>Set 函数 传入可迭代对象</p>
+<p>属性：size</p>
+<p>方法： add、has、delete、clear、keys、values、entries、forEach</p>
+<h4 id="let、const"><a href="#let、const" class="headerlink" title="let、const"></a>let、const</h4><p>新增块级作用域 <code>{}</code>（包括使用 if 和 for 里面的）</p>
+<ul>
+<li>var ：支持预解析、可以重复声明、不支持作用域</li>
+<li>let ：不支持预解析、不允许重复声明、支持块级</li>
+<li>const：不支持预解析、不允许重复声明、支持块级、必须初始化<ul>
+<li>数组、对象可以添加值</li>
+<li>不允许修改数组：<code>const arr = Object.freeze([1,2,3])</code> ，但是嵌套数组允许修改</li>
+</ul>
+</li>
+</ul>
+<h4 id="对象拓展"><a href="#对象拓展" class="headerlink" title="对象拓展"></a>对象拓展</h4><ul>
+<li><p>间接表示   键值和属性值一样时，简写</p>
+</li>
+<li><p>属性名表达式   键值接收表达式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var x = &apos;aaa&apos;</span><br><span class="line">var obj = &#123;</span><br><span class="line">  [x] : 1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h4><p>从数组和对象提取值，对变量进行赋值；左侧表示变量，不表示数组的意思</p>
+<ul>
+<li><p>数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let [a,b,c] = [1,2,3];   // 顺序对应</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let &#123;foo,bar&#125; = &#123;foo:&quot;aaa&quot;,bar:&apos;bbb&apos;&#125;  // key 值对应</span><br><span class="line">let &#123;foo:F,bar:B&#125; = &#123;foo:&quot;aaa&quot;,bar:&apos;bbb&apos;&#125;   // 将 foo 赋值给 F</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多重解构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let &#123;foo:[a,b],bar:B&#125; = &#123;foo:[10,20],bar:&apos;bbb&apos;&#125;   // b == 20</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="拓展运算符"><a href="#拓展运算符" class="headerlink" title="拓展运算符"></a>拓展运算符</h4><p><code>…</code>把数组/对象转成参数序列，可用于 数组传参、数组合并</p>
+<ul>
+<li><code>[‘a’,‘b’,‘c’] =&gt; ‘a’,‘b’,‘c’</code></li>
+<li><code>{ left:100,top:200 } =&gt;  left:100,top:200</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,5,7]</span><br><span class="line">console.log(Math.max(...arr))</span><br><span class="line"></span><br><span class="line">arr3 = [...arr1,...arr2]</span><br><span class="line">obj3 = &#123; ...obj1,...obj2&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for (var attr in arr)&#123;</span><br><span class="line">  console.log(attr)   // 数组下标</span><br><span class="line">&#125;</span><br><span class="line">for (var attr of arr)&#123;</span><br><span class="line">  console.log(attr)   // 数组元素</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>实现对象迭代</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">obj[Symbol.iterator] = function ()&#123;</span><br><span class="line">	let keys = Object.keys(obj);</span><br><span class="line">	let len = keys.length;</span><br><span class="line">	let n = 0;</span><br><span class="line">  return &#123;</span><br><span class="line">  	next:function()&#123;</span><br><span class="line">  		if(n&lt;len)&#123;</span><br><span class="line">        return &#123;  	value:key[n++],	done:false&#125;</span><br><span class="line">        // return &#123;  	value:&#123;k:key[n++],v:obj[key[n++]]&#125;,	done:false&#125;</span><br><span class="line">      &#125;else&#123;</span><br><span class="line">        return &#123;done:false&#125;</span><br><span class="line">      &#125;</span><br><span class="line">  	&#125;  	</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">for(var key of obj)&#123;   &#125;</span><br><span class="line">//for(var &#123;k,v&#125; of obj)&#123;   &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="函数拓展"><a href="#函数拓展" class="headerlink" title="函数拓展"></a>函数拓展</h4><ul>
+<li><p>设置默认参数  必填在前，可选在后</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function fn(x,y=3)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>rest</code>剩余参数<code>…</code> 赋值给紧邻变量（数组）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function arrPush(arr,...newData)&#123;</span><br><span class="line">  for(var i=0;i&lt;newData.length;i++)&#123;</span><br><span class="line">    arr.push(newData[i])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>箭头函数   <code>函数声明 =&gt; 函数体</code>  <code>() =&gt; {}</code>   ；</p>
+<p>参数只有一个，省略<code>()</code>；一条语句，<code>可以省略{return}</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let fn = ()=&gt;&#123;  console.log(attr) &#125;</span><br><span class="line">let fn2 = x =&gt; x+100</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>this</code> 创建时就指向创建期上下文 ；即使赋值也是原有指向<ul>
+<li><code>setTimeout</code>原本指向 <code>window</code>，使用箭头函数指向当前</li>
+</ul>
+</li>
+<li>没有 <code>arguments</code></li>
+<li>不能作为生成器函数</li>
+</ul>
+</li>
+</ul>
+<h4 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h4><ul>
+<li>Set、WeakSet</li>
+<li>Map、WeakMap</li>
+</ul>
+<h3 id="函数拓展-1"><a href="#函数拓展-1" class="headerlink" title="函数拓展"></a>函数拓展</h3><h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><ul>
+<li>startWith()   以…开始  ；返回布尔值</li>
+<li>endwith()</li>
+<li>includes()</li>
+<li>repeat()  重复次数</li>
+</ul>
+<h4 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h4><ul>
+<li>isFinite()、isNaN()、parseInt、parseFloat</li>
+</ul>
+<h4 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h4><ul>
+<li>includes(value)</li>
+<li>forEach( function ( item,index,array ) { },content)  // 第二个参数传入 this 指向</li>
+<li>every   都真为真   实现全选</li>
+<li>some  有真为真    实现多选一</li>
+<li>filter   返回真的值</li>
+<li>map   映射</li>
+<li>reduce(function(prev,current){}, 0)  // 0 表示初始值</li>
+<li>Array.from()  转换成数组</li>
+<li>fill(str,start,end)    将所有元素替换    </li>
+</ul>
+<h4 id="Obj"><a href="#Obj" class="headerlink" title="Obj"></a>Obj</h4><ul>
+<li>assign(obj1,obj2)  浅拷贝</li>
+<li>create(obj)   赋值给的 prototype </li>
+<li>freeze</li>
+<li>definePrototype(obj,‘key’,{ })  // 定义属性、描述符（默认不可枚举、删除）</li>
+</ul>
+<h3 id="Class-类"><a href="#Class-类" class="headerlink" title="Class 类"></a>Class 类</h3><p>原有方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const Miaov = function (a,b)&#123;</span><br><span class="line">  this.a = a</span><br><span class="line">  this.b = b</span><br><span class="line">  return this</span><br><span class="line">&#125;</span><br><span class="line">Miaov.prototype = &#123;</span><br><span class="line">  constructor: Miaov,</span><br><span class="line">  print:function()&#123; console.log(this.a)&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>新的方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Miaov&#123;</span><br><span class="line">  constructor(a,b)&#123; </span><br><span class="line">    this.a = a</span><br><span class="line">    this.b = b</span><br><span class="line">    return this</span><br><span class="line">  &#125;</span><br><span class="line">   print()&#123; </span><br><span class="line">   	console.log(this.a)</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>constructor</code> 方法是构造方法，<code>this</code> 代表实例对象，即ES5 的<code>Miaov</code> 函数构造方法，对应ES6的Miaov类的构造方法</li>
+<li><code>constructor</code>必须有；不显式调用仍会默认使用</li>
+<li><code>print</code> 方法，不需要<code>function</code>关键词和<code>,</code>逗号</li>
+<li>类的所有方法，仍然在类的 prototype 上</li>
+<li>类中的方法不可枚举</li>
+</ul>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class parent&#123;</span><br><span class="line">  constructor(a,b)&#123;</span><br><span class="line">		this.a = a</span><br><span class="line">		this.b = b</span><br><span class="line">		return this</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class child extends parent &#123;</span><br><span class="line">  constructor()&#123;</span><br><span class="line">		super(1,2);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>ES5 调用父类    parent.call(this,value)  ;  ES 6 使用 super</li>
+<li>创建时 <code>constructor里面</code>没有this ；之外不能使用 <code>super</code></li>
+<li>如果子类有自己的构造函数，<strong>必须调用父类**</strong></li>
+</ul>
+<h3 id="异步-Promise"><a href="#异步-Promise" class="headerlink" title="异步 Promise"></a>异步 Promise</h3><ul>
+<li><p>对象 new Promise(cb)  ===&gt;  基本使用  Pending 进行中 Resolved 已完成   Rejected  已失败</p>
+</li>
+<li><p>原型方法：   </p>
+<ul>
+<li><p>then    成功调用   ；then 调用无论成功失败，默认会返回成功的Promise实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">p.then(()=&gt;&#123;</span><br><span class="line">  console.log(&apos;a&apos;)</span><br><span class="line">&#125;,()=&gt;&#123;</span><br><span class="line">  console.log(2)</span><br><span class="line">  //return new Promise((resolve,reject)=&gt;&#123; reject();&#125;)</span><br><span class="line">  return Promise.reject()</span><br><span class="line">&#125;).then()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>catch   失败调用 ；只有前面的 then 没有第二个参数，才能触发；<strong>也会返回成功的Promise</strong></p>
+</li>
+</ul>
+</li>
+<li><p>静态方法</p>
+<ul>
+<li>all    将多个 Promise 实例包装成新的实例<ul>
+<li>当所有实例的状态都为 resolved，all 的实例状态才为 resolved；返回值组成一个数组，传给 then 中的 resolve 函数</li>
+<li>只要有一个被 rejected，all 的状态就是 rejected ；第一个 rejected 的返回值传给回调函数</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function loadImg(url)&#123;</span><br><span class="line">	const p = new Promise(function(resolve,reject)&#123;</span><br><span class="line">    const img = new Image()</span><br><span class="line">    img.src = url</span><br><span class="line">    img.onload = function()&#123;</span><br><span class="line">      resolve(this)</span><br><span class="line">    &#125;</span><br><span class="line">    img.onerror = function()&#123;</span><br><span class="line">      reject(err)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  p.then(function(img)&#123;</span><br><span class="line">    console.log(&apos;...加载完成&apos;)</span><br><span class="line">  &#125;).catch(function(err)&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">  &#125;)</span><br><span class="line">  return p</span><br><span class="line">&#125;</span><br><span class="line">const allDone = Promise.all([loadImage(imgs[0]),loadImage(imgs[1]])</span><br><span class="line">alldone.then().catch()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Promise.race([p1,p2])   // 类似 some ，先跑完先执行</li>
+<li>resolve </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 1. 参数是Promise实例，将不做修改，返回该实例</span><br><span class="line">Promise.resolve(loadImg[0]).then()</span><br><span class="line"></span><br><span class="line">// 2. 将对象转为Promise 对象，然后立即执行 thenable 对象的 then 函数</span><br><span class="line">Promise.resolve(&#123;</span><br><span class="line">   then(resolve,rejected)&#123;</span><br><span class="line">     const img = new Image()</span><br><span class="line">     img.src = url</span><br><span class="line">     img.onload = function()&#123;</span><br><span class="line">       resolve(this)</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;).then(function (img)&#123;</span><br><span class="line">   document.body.apendChild(img )</span><br><span class="line"> &#125;)</span><br><span class="line"> </span><br><span class="line">// 3. 参数是基本数据类型，返回状态为resolve的Promise实例，且参数作为then的参数</span><br><span class="line">Promise.resolve(&apos;haha&apos;).then(function (str)&#123;</span><br><span class="line">  console.log(str)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Generator"><a href="#Generator" class="headerlink" title="Generator"></a>Generator</h3><p><code>function* fn()</code>，内部使用 yield ，定义遍历器的成员</p>
+<p>只能使用 <code>next(value)</code> 调用返回的迭代函数，传入参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function* fn()&#123;</span><br><span class="line">  console.log(1)</span><br><span class="line">  yield console.log(2)</span><br><span class="line">  console.log(str)</span><br><span class="line">&#125;</span><br><span class="line">let f = fn()</span><br><span class="line">f.next   // &#123;value,done:false&#125;    结果： 1  2</span><br></pre></td></tr></table></figure>
+<h4 id="实现异步"><a href="#实现异步" class="headerlink" title="实现异步"></a>实现异步</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function* fn()&#123;</span><br><span class="line">  console.log(1)</span><br><span class="line">  // let val = yield getData()   // 输出结果 1 2 3   val===111</span><br><span class="line">  getData()             // 输出结果 1 3 2 </span><br><span class="line">  console.log(3)</span><br><span class="line">&#125;</span><br><span class="line">function getData()&#123;</span><br><span class="line">  setTimeout(() =&gt; &#123;</span><br><span class="line">    console.log(2)</span><br><span class="line">    f.next(111)</span><br><span class="line">  &#125;,1000)</span><br><span class="line">&#125;</span><br><span class="line">let f = fn()</span><br><span class="line">f.next   // &#123;value,done:false&#125;    结果： 1  2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">function* fn()&#123;</span><br><span class="line">  console.log(1)</span><br><span class="line">  </span><br><span class="line">  let val = yield getData()  </span><br><span class="line">  console.log(val)</span><br><span class="line">  let val1 = yield getData()  </span><br><span class="line">  console.log(val1)</span><br><span class="line">    </span><br><span class="line">  console.log(3)</span><br><span class="line">&#125;</span><br><span class="line">function getData()&#123;</span><br><span class="line">	return new Promise( (resolve,reject) =&gt;&#123;</span><br><span class="line">      setTimeout(() =&gt; &#123;</span><br><span class="line">    		resolve(100);</span><br><span class="line">  		&#125;,1000)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line">function co(callback)&#123;</span><br><span class="line">  let cb = callback()</span><br><span class="line">  // 递归调用 cb 的 next 方法</span><br><span class="line">  function next(d)&#123;</span><br><span class="line">    let result = cb.next(d)   </span><br><span class="line">    if(result.done)&#123;</span><br><span class="line">      return</span><br><span class="line">    &#125;</span><br><span class="line">    result.value.then( data =&gt;&#123;</span><br><span class="line">      next(data)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  next()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">co(fn)    // 1 100 100 3</span><br></pre></td></tr></table></figure>
+<h3 id="async-await"><a href="#async-await" class="headerlink" title="async await"></a>async await</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">async  function fn()&#123;</span><br><span class="line">  console.log(1)</span><br><span class="line">  </span><br><span class="line">  let val = await getData()  </span><br><span class="line">  console.log(val)</span><br><span class="line">  let val1 = await getData()  </span><br><span class="line">  console.log(val1)</span><br><span class="line">    </span><br><span class="line">  console.log(3)</span><br><span class="line">&#125;</span><br><span class="line">function getData()&#123;</span><br><span class="line">	return new Promise( (resolve,reject) =&gt;&#123;</span><br><span class="line">      setTimeout(() =&gt; &#123;</span><br><span class="line">    		resolve(100);</span><br><span class="line">  		&#125;,1000)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line">function co(callback)&#123;</span><br><span class="line">  let cb = callback()</span><br><span class="line">  // 递归调用 cb 的 next 方法</span><br><span class="line">  function next(d)&#123;</span><br><span class="line">    let result = cb.next(d)   </span><br><span class="line">    if(result.done)&#123;</span><br><span class="line">      return</span><br><span class="line">    &#125;</span><br><span class="line">    result.value.then( data =&gt;&#123;</span><br><span class="line">      next(data)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  next()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">co(fn)    // 1 100 100 3</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+          
+            <a href="/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
+          
+            <a href="/tags/es6/" rel="tag"><i class="fa fa-tag"></i> es6</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/12/canvas/" rel="next" title="canvas">
+                <i class="fa fa-chevron-left"></i> canvas
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/album.jpg" alt="Xiao Qi">
+            
+              <p class="site-author-name" itemprop="name">Xiao Qi</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/qiwang97" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:2396586732@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liaoxuefeng.com/" title="廖雪峰" target="_blank">廖雪峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ES6-新增"><span class="nav-number">1.</span> <span class="nav-text">ES6 新增</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新增类型"><span class="nav-number">1.0.1.</span> <span class="nav-text">新增类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#进制"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">进制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#symbol"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">symbol</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串拓展"><span class="nav-number">1.0.1.3.</span> <span class="nav-text">字符串拓展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Map"><span class="nav-number">1.0.1.4.</span> <span class="nav-text">Map</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Set"><span class="nav-number">1.0.1.5.</span> <span class="nav-text">Set</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#let、const"><span class="nav-number">1.0.1.6.</span> <span class="nav-text">let、const</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象拓展"><span class="nav-number">1.0.1.7.</span> <span class="nav-text">对象拓展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解构赋值"><span class="nav-number">1.0.1.8.</span> <span class="nav-text">解构赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展运算符"><span class="nav-number">1.0.1.9.</span> <span class="nav-text">拓展运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代"><span class="nav-number">1.0.1.10.</span> <span class="nav-text">迭代</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数拓展"><span class="nav-number">1.0.1.11.</span> <span class="nav-text">函数拓展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内置对象"><span class="nav-number">1.0.1.12.</span> <span class="nav-text">内置对象</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数拓展-1"><span class="nav-number">1.0.2.</span> <span class="nav-text">函数拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Number"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">Number</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Array"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">Array</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Obj"><span class="nav-number">1.0.2.4.</span> <span class="nav-text">Obj</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Class-类"><span class="nav-number">1.0.3.</span> <span class="nav-text">Class 类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#继承"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">继承</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步-Promise"><span class="nav-number">1.0.4.</span> <span class="nav-text">异步 Promise</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generator"><span class="nav-number">1.0.5.</span> <span class="nav-text">Generator</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实现异步"><span class="nav-number">1.0.5.1.</span> <span class="nav-text">实现异步</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#async-await"><span class="nav-number">1.0.6.</span> <span class="nav-text">async await</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xiao Qi</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+-->
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"tagMode":false});</script></body>
+</html>
