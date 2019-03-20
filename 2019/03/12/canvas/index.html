@@ -86,21 +86,21 @@
 
 
 
-<meta name="description" content="Canvas canvas 最早由Apple引入WebKit,用于Mac OS X 的 Dashboard,后来又在Safari和Google Chrome被实现。基于 Gecko 1.8的浏览器,比如 Firefox 1.5, 同样支持这个元素。&amp;lt;canvas&amp;gt; 元素是WhatWG Web applications 1.0规范的一部分,也包含于HTML 5中。    Canvas什么">
+<meta name="description" content="canvas 简要介绍">
 <meta name="keywords" content="html,笔记,canvas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="canvas">
 <meta property="og:url" content="https://qiwang97.github.io/2019/03/12/canvas/index.html">
 <meta property="og:site_name" content="小柒的博客">
-<meta property="og:description" content="Canvas canvas 最早由Apple引入WebKit,用于Mac OS X 的 Dashboard,后来又在Safari和Google Chrome被实现。基于 Gecko 1.8的浏览器,比如 Firefox 1.5, 同样支持这个元素。&amp;lt;canvas&amp;gt; 元素是WhatWG Web applications 1.0规范的一部分,也包含于HTML 5中。    Canvas什么">
+<meta property="og:description" content="canvas 简要介绍">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://qiwang97.github.io/2019/03/12/canvas/Users/QiWang/Documents/Markdown/HTML+%20CSS/canvas/readme/images/location.jpg">
 <meta property="og:image" content="https://qiwang97.github.io/2019/03/12/canvas/Users/QiWang/Documents/Markdown/HTML+%20CSS/canvas/readme/images/path.jpg">
 <meta property="og:image" content="https://qiwang97.github.io/2019/03/12/canvas/Users/QiWang/Documents/Markdown/HTML+%20CSS/canvas/readme/images/zero.jpg">
-<meta property="og:updated_time" content="2019-03-12T08:11:18.582Z">
+<meta property="og:updated_time" content="2019-03-20T17:30:44.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="canvas">
-<meta name="twitter:description" content="Canvas canvas 最早由Apple引入WebKit,用于Mac OS X 的 Dashboard,后来又在Safari和Google Chrome被实现。基于 Gecko 1.8的浏览器,比如 Firefox 1.5, 同样支持这个元素。&amp;lt;canvas&amp;gt; 元素是WhatWG Web applications 1.0规范的一部分,也包含于HTML 5中。    Canvas什么">
+<meta name="twitter:description" content="canvas 简要介绍">
 <meta name="twitter:image" content="https://qiwang97.github.io/2019/03/12/canvas/Users/QiWang/Documents/Markdown/HTML+%20CSS/canvas/readme/images/location.jpg">
 
 
@@ -389,7 +389,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  947 字
+                  877 字
                 </span>
               
 
@@ -412,6 +412,10 @@
           
 
           
+              <div class="post-description">
+                  canvas 简要介绍
+              </div>
+          
 
         </div>
       </header>
@@ -426,15 +430,14 @@
       
 
       
-        <h1 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h1><blockquote>
-<p>canvas 最早由Apple引入WebKit,用于Mac OS X 的 Dashboard,后来又在Safari和Google Chrome被实现。<br>基于 Gecko 1.8的浏览器,比如 Firefox 1.5, 同样支持这个元素。<br>&lt;canvas&gt; 元素是WhatWG Web applications 1.0规范的一部分,也包含于HTML 5中。  </p>
-</blockquote>
-<h3 id="Canvas-1"><a href="#Canvas-1" class="headerlink" title="Canvas"></a>Canvas</h3><h4 id="什么是Canvas？"><a href="#什么是Canvas？" class="headerlink" title="什么是Canvas？"></a>什么是Canvas？</h4><p>HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。<br>画布是一个矩形区域，可以控制其每一像素。<br>canvas 拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。</p>
+        <h3 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h3><hr>
+<h4 id="什么是Canvas？"><a href="#什么是Canvas？" class="headerlink" title="什么是Canvas？"></a>什么是Canvas？</h4><p>HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。<br>画布是一个矩形区域，可以控制其每一像素。<br>canvas 拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。</p>
 <h4 id="创建Canvas元素"><a href="#创建Canvas元素" class="headerlink" title="创建Canvas元素"></a>创建Canvas元素</h4><p>向 HTML5 页面添加 canvas 元素。<br>规定元素的 id、宽度和高度：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"myCanvas"</span> <span class="attr">width</span>=<span class="string">"200"</span> <span class="attr">height</span>=<span class="string">"100"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="Canvas坐标系"><a href="#Canvas坐标系" class="headerlink" title="Canvas坐标系"></a>Canvas坐标系</h4><p><img src="/2019/03/12/canvas/Users/QiWang/Documents/Markdown/HTML+%20CSS/canvas/readme/images/location.jpg" alt></p>
 <h4 id="通过JavaScript来绘制"><a href="#通过JavaScript来绘制" class="headerlink" title="通过JavaScript来绘制"></a>通过JavaScript来绘制</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*获取元素*/</span></span><br><span class="line"><span class="keyword">var</span> myCanvas = <span class="built_in">document</span>.querySelector(<span class="string">'#myCanvas'</span>);</span><br><span class="line"><span class="comment">/*获取绘图工具*/</span></span><br><span class="line"><span class="keyword">var</span> context = myCanvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line"><span class="comment">/*设置绘图的起始位置*/</span></span><br><span class="line">context.moveTo(<span class="number">100</span>,<span class="number">100</span>);</span><br><span class="line"><span class="comment">/*绘制路径*/</span></span><br><span class="line">context.lineTo(<span class="number">200</span>,<span class="number">200</span>);</span><br><span class="line"><span class="comment">/*描边*/</span></span><br><span class="line">context.stroke();</span><br></pre></td></tr></table></figure>
-<h3 id="Canvas的基本使用"><a href="#Canvas的基本使用" class="headerlink" title="Canvas的基本使用"></a>Canvas的基本使用</h3><h4 id="图形绘制"><a href="#图形绘制" class="headerlink" title="图形绘制"></a>图形绘制</h4><p>需要理解些概念：  </p>
+<h3 id="Canvas的基本使用"><a href="#Canvas的基本使用" class="headerlink" title="Canvas的基本使用"></a>Canvas的基本使用</h3><hr>
+<h4 id="图形绘制"><a href="#图形绘制" class="headerlink" title="图形绘制"></a>图形绘制</h4><p>需要理解些概念：  </p>
 <ul>
 <li>路径的概念</li>
 <li>路径的绘制<ul>
@@ -784,7 +787,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Canvas"><span class="nav-number">1.</span> <span class="nav-text">Canvas</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Canvas-1"><span class="nav-number">1.0.1.</span> <span class="nav-text">Canvas</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是Canvas？"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">什么是Canvas？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建Canvas元素"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">创建Canvas元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Canvas坐标系"><span class="nav-number">1.0.1.3.</span> <span class="nav-text">Canvas坐标系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过JavaScript来绘制"><span class="nav-number">1.0.1.4.</span> <span class="nav-text">通过JavaScript来绘制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Canvas的基本使用"><span class="nav-number">1.0.2.</span> <span class="nav-text">Canvas的基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图形绘制"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">图形绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置样式"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">设置样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文档"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">参考文档</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Canvas图形绘制"><span class="nav-number">1.0.3.</span> <span class="nav-text">Canvas图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#矩形绘制"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">矩形绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#圆弧绘制"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">圆弧绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绘制文本"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">绘制文本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#做动画"><span class="nav-number">1.0.4.</span> <span class="nav-text">做动画</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#绘制图片"><span class="nav-number">1.0.4.1.</span> <span class="nav-text">绘制图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#序列帧动画"><span class="nav-number">1.0.4.2.</span> <span class="nav-text">序列帧动画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#坐标变换"><span class="nav-number">1.0.4.3.</span> <span class="nav-text">坐标变换</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Canvas"><span class="nav-number">1.</span> <span class="nav-text">Canvas</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是Canvas？"><span class="nav-number">1.1.</span> <span class="nav-text">什么是Canvas？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建Canvas元素"><span class="nav-number">1.2.</span> <span class="nav-text">创建Canvas元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Canvas坐标系"><span class="nav-number">1.3.</span> <span class="nav-text">Canvas坐标系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过JavaScript来绘制"><span class="nav-number">1.4.</span> <span class="nav-text">通过JavaScript来绘制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Canvas的基本使用"><span class="nav-number">2.</span> <span class="nav-text">Canvas的基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图形绘制"><span class="nav-number">2.1.</span> <span class="nav-text">图形绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置样式"><span class="nav-number">2.2.</span> <span class="nav-text">设置样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文档"><span class="nav-number">2.3.</span> <span class="nav-text">参考文档</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Canvas图形绘制"><span class="nav-number">3.</span> <span class="nav-text">Canvas图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#矩形绘制"><span class="nav-number">3.1.</span> <span class="nav-text">矩形绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#圆弧绘制"><span class="nav-number">3.2.</span> <span class="nav-text">圆弧绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绘制文本"><span class="nav-number">3.3.</span> <span class="nav-text">绘制文本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#做动画"><span class="nav-number">4.</span> <span class="nav-text">做动画</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#绘制图片"><span class="nav-number">4.1.</span> <span class="nav-text">绘制图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#序列帧动画"><span class="nav-number">4.2.</span> <span class="nav-text">序列帧动画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#坐标变换"><span class="nav-number">4.3.</span> <span class="nav-text">坐标变换</span></a></li></ol></li></ol></div>
             
 
           </div>
