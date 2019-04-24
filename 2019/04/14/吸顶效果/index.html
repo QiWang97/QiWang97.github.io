@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="js,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="总结几个实现滚动吸顶效果的方法">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="吸顶效果">
+<meta property="og:url" content="https://qiwang97.github.io/2019/04/14/吸顶效果/index.html">
+<meta property="og:site_name" content="小柒的博客">
+<meta property="og:description" content="总结几个实现滚动吸顶效果的方法">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qiwang97.github.io/2019/04/14/吸顶效果/640.webp">
+<meta property="og:image" content="https://qiwang97.github.io/2019/04/14/吸顶效果/640.webp">
+<meta property="og:image" content="https://qiwang97.github.io/2019/04/14/吸顶效果/640.webp">
+<meta property="og:image" content="https://qiwang97.github.io/2019/04/14/吸顶效果/640.webp">
+<meta property="og:updated_time" content="2019-04-17T13:04:11.719Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="吸顶效果">
+<meta name="twitter:description" content="总结几个实现滚动吸顶效果的方法">
+<meta name="twitter:image" content="https://qiwang97.github.io/2019/04/14/吸顶效果/640.webp">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Xiao Qi'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://qiwang97.github.io/2019/04/14/吸顶效果/">
+
+
+
+
+
+  <title>吸顶效果 | 小柒的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/QiWang97" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小柒的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-站点">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-baidusitemap">
+          <a href="/baidusitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            baidusitemap
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://qiwang97.github.io/2019/04/14/吸顶效果/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiao Qi">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/album.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小柒的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">吸顶效果</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-14T16:35:14+08:00">
+                2019-04-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1.9k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  7 分钟
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  总结几个实现滚动吸顶效果的方法
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="吸顶效果"><a href="#吸顶效果" class="headerlink" title="吸顶效果"></a>吸顶效果</h2><hr>
+<h3 id="position-sticky"><a href="#position-sticky" class="headerlink" title="position:sticky"></a>position:sticky</h3><h4 id="粘性定位"><a href="#粘性定位" class="headerlink" title="粘性定位"></a>粘性定位</h4><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/position" target="_blank" rel="noopener">MDN 官方文档</a></p>
+<p>粘性定位 sticky 相当于相对定位 relative 和固定定位 fixed 的结合；在页面元素滚动过程中，某个元素距离其父元素的距离达到 sticky 粘性定位的要求时；元素的相对定位 relative 效果变成固定定位 fixed 的效果。</p>
+<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><p>使用条件：</p>
+<ol>
+<li>父元素不能 overflow:hidden 或者 overflow:auto 属性</li>
+<li>必须指定 top、bottom、left、right 4 个值之一，否则只会处于相对定位</li>
+<li>父元素的高度不能低于 sticky 元素的高度</li>
+<li>sticky 元素仅在其父元素内生效</li>
+<li><strong>兼容性较差</strong></li>
+</ol>
+<p>在需要滚动吸顶的元素加上以下样式便可以实现这个效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.sticky &#123;    position: -webkit-sticky;    position: sticky;    top: 0;&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/04/14/吸顶效果/640.webp" alt="img"></p>
+<h3 id="JQuery-的-offset-top"><a href="#JQuery-的-offset-top" class="headerlink" title="JQuery 的 offset().top"></a>JQuery 的 offset().top</h3><p> offset().top  和 scrollTop() 结合，可以实现滚动吸顶效果。</p>
+<blockquote>
+<p>scrolloTop() 有兼容性问题，在微信浏览器、IE、某些 firefox 版本中 $(‘html’).scrollTop() 的值会为 0。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(&apos;scroll&apos;, self.handleScrollOne);</span><br><span class="line">let handleScrollOne = function() &#123;    </span><br><span class="line">  let self = this;    </span><br><span class="line">  let scrollTop = $(&apos;html&apos;).scrollTop();    </span><br><span class="line">  let offsetTop = $(&apos;.title_box&apos;).offset().top;    </span><br><span class="line">  self.titleFixed = scrollTop &gt; offsetTop;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="原生-offsetTop"><a href="#原生-offsetTop" class="headerlink" title="原生 offsetTop"></a>原生 offsetTop</h3><p> offsetTop 是相对定位父级的偏移量，倘若需要滚动吸顶的元素出现定位父级元素，那么 offsetTop 获取的就不是元素距离页面顶部的距离。</p>
+<p>可以对 offsetTop 做以下处理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let getOffset = function(obj,direction)&#123;    </span><br><span class="line">	let offsetL = 0;    </span><br><span class="line">	let offsetT = 0;    </span><br><span class="line">	while( obj!== window.document.body &amp;&amp; obj !== null )&#123;        </span><br><span class="line">		offsetL += obj.offsetLeft;        </span><br><span class="line">		offsetT += obj.offsetTop;        </span><br><span class="line">		obj = obj.offsetParent;    </span><br><span class="line">	&#125;          </span><br><span class="line">		return direction === &apos;left&apos;?offsetL:offsetT;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(&apos;scroll&apos;, self.handleScrollTwo);</span><br><span class="line">let handleScrollTwo = function() &#123;    </span><br><span class="line">	let self = this;    </span><br><span class="line">	let scrollTop = window.pageYOffset || document.documentElement.scrollTop || 				document.body.scrollTop;    </span><br><span class="line">	let offsetTop = self.getOffset(self.$refs.pride_tab_fixed);    </span><br><span class="line">	self.titleFixed = scrollTop &gt; offsetTop;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="obj-getBoundingClientRect-top"><a href="#obj-getBoundingClientRect-top" class="headerlink" title="obj.getBoundingClientRect().top"></a>obj.getBoundingClientRect().top</h3><p><strong>定义：</strong></p>
+<p>这个 API 可以告诉你页面中某个元素<strong>相对浏览器视窗</strong>上下左右的距离。</p>
+<p><strong>使用：</strong><br>tab 吸顶可以使用 obj.getBoundingClientRect().top 代替 scrollTop - offsetTop,代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">// html    </span><br><span class="line">&lt;div class=&quot;pride_tab_fixed&quot; ref=&quot;pride_tab_fixed&quot;&gt;        </span><br><span class="line">&lt;div class=&quot;pride_tab&quot; :class=&quot;titleFixed == true ? &apos;isFixed&apos; :&apos;&apos;&quot;&gt;            </span><br><span class="line">// some code        </span><br><span class="line">&lt;/div&gt;    &lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">// vue    </span><br><span class="line">export default &#123;        </span><br><span class="line">	data()&#123;          </span><br><span class="line">		return&#123;            </span><br><span class="line">			titleFixed: false          </span><br><span class="line">		&#125;        </span><br><span class="line">	&#125;,        </span><br><span class="line">	activated()&#123;          </span><br><span class="line">		this.titleFixed = false;          </span><br><span class="line">		window.addEventListener(&apos;scroll&apos;, this.handleScroll);        </span><br><span class="line">	&#125;,        </span><br><span class="line">	methods: &#123;          </span><br><span class="line">		//滚动监听，头部固定          </span><br><span class="line">		handleScroll: function () &#123;            </span><br><span class="line">			let offsetTop = this.$refs.pride_tab_fixed.getBoundingClientRect().top;            				this.titleFixed = offsetTop &lt; 0;            </span><br><span class="line">			// some code          </span><br><span class="line">		&#125;        </span><br><span class="line">	&#125;      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="offsetTop-和-getBoundingClientRect-区别"><a href="#offsetTop-和-getBoundingClientRect-区别" class="headerlink" title="offsetTop 和 getBoundingClientRect() 区别"></a>offsetTop 和 getBoundingClientRect() 区别</h4><p><strong>1. getBoundingClientRect():</strong></p>
+<p>用于获得页面中某个元素的左，上，右和下分别相对浏览器视窗的位置。不包含文档卷起来的部分。</p>
+<p><img src="/2019/04/14/吸顶效果/640.webp" alt="img"></p>
+<p>该函数返回一个 object 对象，有8个属性： top, right, buttom, left, width, height, x, y</p>
+<p><img src="/2019/04/14/吸顶效果/640.webp" alt="img"></p>
+<p><strong>2. offsetTop:</strong></p>
+<p>用于获得当前元素到定位父级（ element.offsetParent ）顶部的距离（偏移值）。</p>
+<blockquote>
+<p>定位父级 offsetParent 的定义是：与当前元素最近的 position != static 的父级元素。</p>
+</blockquote>
+<p>offsetTop 和 offsetParent 方法相结合可以获得该元素到 body 上边距的距离。代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">getOffset: function(obj,direction)&#123;    </span><br><span class="line">	let offsetL = 0;    </span><br><span class="line">	let offsetT = 0;    </span><br><span class="line">	while( obj!== window.document.body &amp;&amp; obj !== null )&#123;       </span><br><span class="line">  	offsetL += obj.offsetLeft;     </span><br><span class="line">    offsetT += obj.offsetTop;     </span><br><span class="line">    obj = obj.offsetParent;   </span><br><span class="line">  &#125;    </span><br><span class="line">  return direction === &apos;left&apos;?offsetL:offsetT; </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="延伸知识点"><a href="#延伸知识点" class="headerlink" title="延伸知识点"></a>延伸知识点</h4><p><strong>offsetWidth：</strong></p>
+<p>元素在水平方向上占用的空间大小：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">offsetWidth = border-left + padding-left + width + padding-right + border-right</span><br></pre></td></tr></table></figure>
+<p><strong>offsetHeight：</strong></p>
+<p>元素在垂直方向上占用的空间大小：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">offsetHeight = border-top + padding-top + height + padding-bottom + border-bottom</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：如果存在垂直滚动条，offsetWidth 也包括垂直滚动条的宽度；如果存在水平滚动条，offsetHeight 也包括水平滚动条的高度；</p>
+</blockquote>
+<p><strong>offsetTop：</strong></p>
+<p>元素的上外边框至 offsetParent 元素的上内边框之间的像素距离；</p>
+<p><strong>offsetLeft：</strong></p>
+<p>元素的左外边框至 offsetParent 元素的左内边框之间的像素距离；</p>
+<p><strong>注意事项</strong></p>
+<ol>
+<li>所有偏移量属性都是只读的；</li>
+<li>如果给元素设置了 display:none，则它的偏移量属性都为 0；</li>
+<li>每次访问偏移量属性都需要重新计算（<strong>保存变量</strong>）；</li>
+<li>在使用的时候可能出现 DOM 没有初始化，就读取了该属性，这个时候会返回 0；对于这个问题我们需要等到 DOM 元素初始化完成后再执行。</li>
+</ol>
+<h3 id="bugs"><a href="#bugs" class="headerlink" title="bugs"></a>bugs</h3><h4 id="吸顶的那一刻伴随抖动"><a href="#吸顶的那一刻伴随抖动" class="headerlink" title="吸顶的那一刻伴随抖动"></a>吸顶的那一刻伴随抖动</h4><p>出现抖动的原因是因为：在吸顶元素 position 变为 fixed 的时候，该元素就脱离了文档流，下一个元素就进行了补位。就是这个补位操作造成了抖动。</p>
+<p><strong>解决方案</strong></p>
+<p>为这个吸顶元素添加一个等高的父元素，监听这个父元素的 getBoundingClientRect().top 值来实现吸顶效果，即：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;title_box&quot; ref=&quot;pride_tab_fixed&quot;&gt;   </span><br><span class="line">&lt;div class=&quot;title&quot; :class=&quot;titleFixed == true ? &apos;isFixed&apos; :&apos;&apos;&quot;&gt;   </span><br><span class="line">//使用 `obj.getBoundingClientRect().top` 实现    </span><br><span class="line">&lt;/div&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="吸顶效果不能及时响应"><a href="#吸顶效果不能及时响应" class="headerlink" title="吸顶效果不能及时响应"></a>吸顶效果不能及时响应</h4><p><strong>描述：</strong></p>
+<ol>
+<li>当页面往下滚动时，吸顶元素需要等页面滚动停止之后才会出现吸顶效果</li>
+<li>当页面往上滚动时，滚动到吸顶元素恢复文档流位置时吸顶元素不恢复原样，而等页面停止滚动之后才会恢复原样</li>
+</ol>
+<p><strong>原因：</strong> 在 ios 系统上不能实时监听 scroll 滚动监听事件，在滚动停止时才触发其相关的事件。</p>
+<p><strong>解决方案：</strong></p>
+<p> position:sticky 在 IOS6 以上的系统中有良好的兼容性，区分 IOS 和 Android 设备做两种处理。</p>
+<blockquote>
+<p>IOS 使用 position:sticky，Android 使用滚动监听 getBoundingClientRect().top 的值。</p>
+</blockquote>
+<p>如果 IOS 版本过低呢？这里提供一种思路：window.requestAnimationFrame()。</p>
+<h3 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h3><p>我们从两个方向做性能优化（其实是一个方向）：</p>
+<ol>
+<li>避免过度的 reflow</li>
+<li>优化滚动监听事件</li>
+</ol>
+<h4 id="问题定位"><a href="#问题定位" class="headerlink" title="问题定位"></a>问题定位</h4><p>滚动吸顶使用了 offsetTop 或者 getBoundingClientRect().top 来获取响应的偏移量,优化的方向就是从减少读取元素属性次数.</p>
+<h4 id="优化方案"><a href="#优化方案" class="headerlink" title="优化方案"></a>优化方案</h4><p>解决这个问题有以下两个方案：</p>
+<ol>
+<li>牺牲平滑度满足性能，使用节流控制相关方法的调用</li>
+<li>使用 IntersectionObserver 和节流结合，也牺牲了平滑度。</li>
+</ol>
+<h5 id="第一种方案"><a href="#第一种方案" class="headerlink" title="第一种方案"></a>第一种方案</h5><p>可以控制在一定时间内只读取,副作用是在吸顶效果会有些延迟。</p>
+<p>这里节流函数就直接是用 lodash.js 封装好的 throttle 方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(&apos;scroll&apos;, _.throttle(self.handleScrollThree, 50));</span><br></pre></td></tr></table></figure>
+<h5 id="第二种方案"><a href="#第二种方案" class="headerlink" title="第二种方案"></a>第二种方案</h5><p>支持 IntersectionObserver 就用 IntersectionObserver，否则就用 throttle。</p>
+<blockquote>
+<p>IntersectionObserver 可以用来监听元素是否进入了设备的可视区域之内，而不需要频繁的计算来做这个判断。</p>
+</blockquote>
+<p>通过这个属性可以在元素不在可视范围内，不去读取元素的相对位置，已达到性能优化；</p>
+<p>当浏览器不支持这个属性的时候就使用 throttle 来处理。</p>
+<p><img src="/2019/04/14/吸顶效果/640.webp" alt="img"></p>
+<p>大概支持了 60% 以上，在项目中还是可以使用的（你需要做好兼容性处理）。</p>
+<blockquote>
+<p>关于 IntersectionObserver 如何使用，</p>
+<p> MDN(<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IntersectionObserver" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/IntersectionObserver</a>) </p>
+<p> 阮一峰教程(<a href="http://www.ruanyifeng.com/blog/2016/11/intersectionobserver_api.html)。" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2016/11/intersectionobserver_api.html)。</a></p>
+</blockquote>
+<p>使用 IntersectionObserver 和 throttle 优化的代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">IntersectionObserverFun: function() &#123;    </span><br><span class="line">	let self = this;   </span><br><span class="line">  let ele = self.$refs.pride_tab_fixed;</span><br><span class="line">  if( !IntersectionObserver )&#123;      </span><br><span class="line">  	let observer = new IntersectionObserver(function()&#123;      </span><br><span class="line">  		let offsetTop = ele.getBoundingClientRect().top;         </span><br><span class="line">  		self.titleFixed = offsetTop &lt; 0;     </span><br><span class="line">  	&#125;, &#123;            </span><br><span class="line">  	threshold: [1]        </span><br><span class="line">  &#125;);        </span><br><span class="line"> 	observer.observe(document.getElementsByClassName(&apos;title_box&apos;)[0]);    </span><br><span class="line"> &#125; else &#123;        </span><br><span class="line"> 	window.addEventListener(&apos;scroll&apos;, _.throttle(function()&#123;            </span><br><span class="line"> 		let offsetTop = ele.getBoundingClientRect().top;           </span><br><span class="line">    self.titleFixed = offsetTop &lt; 0;     </span><br><span class="line">    &#125;, 50));   </span><br><span class="line">   &#125;</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong></p>
+<blockquote>
+<p>IntersectionObserver API 是异步的，不随着目标元素的滚动同步触发。</p>
+</blockquote>
+<p>规格写明，IntersectionObserver的实现，应该采用 requestIdleCallback()。它不会立即执行回调，它会调用 window.requestIdleCallback() 来异步的执行我们指定的回调函数，而且还规定了最大的延迟时间是 100 毫秒。</p>
+<h3 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h3><hr>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzA5NzkwNDk3MQ==&amp;mid=2650589537&amp;idx=1&amp;sn=9094a973b0e3e866f7794e86eca068e9&amp;chksm=8891d945bfe6505333d28087fa35fa6af31126b2328ec909e68d349f32d81a9f1afbf625b2dc&amp;mpshare=1&amp;scene=23&amp;srcid=0417QdZke2NMg3KvEDKsoaUJ#rd" target="_blank" rel="noopener">奇舞周刊</a></p>
+
+      
+    </div>
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/12/Event-loop/" rel="next" title="Event loopp">
+                <i class="fa fa-chevron-left"></i> Event loopp
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/20/设计模式/" rel="prev" title="设计模式">
+                设计模式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/album.jpg" alt="Xiao Qi">
+            
+              <p class="site-author-name" itemprop="name">Xiao Qi</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/qiwang97" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:2396586732@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liaoxuefeng.com/" title="廖雪峰" target="_blank">廖雪峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#吸顶效果"><span class="nav-number">1.</span> <span class="nav-text">吸顶效果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#position-sticky"><span class="nav-number">1.1.</span> <span class="nav-text">position:sticky</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#粘性定位"><span class="nav-number">1.1.1.</span> <span class="nav-text">粘性定位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用方法"><span class="nav-number">1.1.2.</span> <span class="nav-text">使用方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JQuery-的-offset-top"><span class="nav-number">1.2.</span> <span class="nav-text">JQuery 的 offset().top</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原生-offsetTop"><span class="nav-number">1.3.</span> <span class="nav-text">原生 offsetTop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#obj-getBoundingClientRect-top"><span class="nav-number">1.4.</span> <span class="nav-text">obj.getBoundingClientRect().top</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#offsetTop-和-getBoundingClientRect-区别"><span class="nav-number">1.4.1.</span> <span class="nav-text">offsetTop 和 getBoundingClientRect() 区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#延伸知识点"><span class="nav-number">1.4.2.</span> <span class="nav-text">延伸知识点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bugs"><span class="nav-number">1.5.</span> <span class="nav-text">bugs</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#吸顶的那一刻伴随抖动"><span class="nav-number">1.5.1.</span> <span class="nav-text">吸顶的那一刻伴随抖动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#吸顶效果不能及时响应"><span class="nav-number">1.5.2.</span> <span class="nav-text">吸顶效果不能及时响应</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能优化"><span class="nav-number">1.6.</span> <span class="nav-text">性能优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题定位"><span class="nav-number">1.6.1.</span> <span class="nav-text">问题定位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优化方案"><span class="nav-number">1.6.2.</span> <span class="nav-text">优化方案</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#第一种方案"><span class="nav-number">1.6.2.1.</span> <span class="nav-text">第一种方案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第二种方案"><span class="nav-number">1.6.2.2.</span> <span class="nav-text">第二种方案</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐阅读"><span class="nav-number">1.7.</span> <span class="nav-text">推荐阅读</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xiao Qi</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+-->
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"tagMode":false});</script></body>
+</html>
