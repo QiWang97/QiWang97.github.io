@@ -1,0 +1,45 @@
+<hr>
+<p>title: node 服务器<br>date: 2019-04-22 13:00:17<br>categories:<br>tags:</p>
+<h2 id="description"><a href="#description" class="headerlink" title="description:"></a>description:</h2><h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><h4 id="节点类型"><a href="#节点类型" class="headerlink" title="节点类型"></a>节点类型</h4><ul>
+<li>元素节点。DOM的原子是元素节点，如 <code>ul p div</code>之类。这些元素布局形成网页结构。标签名就是元素名。</li>
+<li>文本节点。文本内容。</li>
+<li>属性节点。对元素做出具体描述，如 <code>title</code></li>
+</ul>
+<h5 id="节点属性"><a href="#节点属性" class="headerlink" title="节点属性"></a>节点属性</h5><ul>
+<li><code>childNodes</code> 所有子元素数组（不只是元素节点）</li>
+<li><code>parentNode</code></li>
+<li><code>nodeType</code> 节点类型，1 元素 2属性 3 文本等等</li>
+<li><code>nodeValue</code>节点值，元素节点值为 null</li>
+<li><code>firstChild</code> <code>lastChild</code></li>
+<li><code>nextSibling</code></li>
+</ul>
+<h4 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h4><h5 id="节点获取"><a href="#节点获取" class="headerlink" title="节点获取"></a>节点获取</h5><ul>
+<li><code>document.getElementById(id)</code> 返回单个节点对象</li>
+<li><code>element.getElementByTagName(tag)</code>  返回节点数组</li>
+<li><code>element.getElementByClassName(class)</code>  返回节点数组，可以传入多个类名，空格隔开</li>
+<li><code>document.querySelectorAll()</code></li>
+</ul>
+<h5 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h5><ul>
+<li><code>el.getAttribute(attr)</code>  获取属性</li>
+<li><code>el.getAttribute(attr,value)</code> 设置属性</li>
+</ul>
+<h5 id="创建标记"><a href="#创建标记" class="headerlink" title="创建标记"></a>创建标记</h5><p>HTML 方法：<code>document.write</code> 和 <code>innerHTML</code></p>
+<p>DOM 方法：</p>
+<p><code>document.createElement(nodeName)</code>创建元素节点</p>
+<p> <code>document.createTextNode(text)</code>创建文本节点</p>
+<h5 id="节点操作-1"><a href="#节点操作-1" class="headerlink" title="节点操作"></a>节点操作</h5><ul>
+<li><p><code>parent.appendChild(child)</code></p>
+</li>
+<li><p><code>parent.insertBefore(el,targetElement)</code></p>
+</li>
+<li><p>没有 <code>insertAfter</code>，实现如下</p>
+<pre><code>function insertAfter(el,targetElement){
+  let parent = targetElement.parentNode
+  if(parent.lastNode === targetElement){
+    parent.appendChild(el)
+  }else{
+    parent.insertBefore(el,targetElement.nextSibling)
+  }
+}
+</code></pre></li>
+</ul>

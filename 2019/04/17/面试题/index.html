@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="笔记,面试题,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="整理的面试题">
+<meta name="keywords" content="笔记,面试题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试题">
+<meta property="og:url" content="https://qiwang97.github.io/2019/04/17/面试题/index.html">
+<meta property="og:site_name" content="小柒的博客">
+<meta property="og:description" content="整理的面试题">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qiwang97.github.io/2019/04/17/面试题/640-1555513463079.webp">
+<meta property="og:image" content="https://qiwang97.github.io/2019/04/17/面试题/640.webp">
+<meta property="og:updated_time" content="2019-04-24T06:19:10.823Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面试题">
+<meta name="twitter:description" content="整理的面试题">
+<meta name="twitter:image" content="https://qiwang97.github.io/2019/04/17/面试题/640-1555513463079.webp">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Xiao Qi'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://qiwang97.github.io/2019/04/17/面试题/">
+
+
+
+
+
+  <title>面试题 | 小柒的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/QiWang97" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小柒的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-站点">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-baidusitemap">
+          <a href="/baidusitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            baidusitemap
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://qiwang97.github.io/2019/04/17/面试题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiao Qi">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/album.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小柒的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">面试题</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-17T22:36:54+08:00">
+                2019-04-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/css/html/" itemprop="url" rel="index">
+                    <span itemprop="name">html</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  18.5k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  70 分钟
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  整理的面试题
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><h5 id="原始类型有哪几种？null-是对象吗？原始数据类型和复杂数据类型存储有什么区别？"><a href="#原始类型有哪几种？null-是对象吗？原始数据类型和复杂数据类型存储有什么区别？" class="headerlink" title="原始类型有哪几种？null 是对象吗？原始数据类型和复杂数据类型存储有什么区别？"></a>原始类型有哪几种？null 是对象吗？原始数据类型和复杂数据类型存储有什么区别？</h5><ul>
+<li>原始类型有 6 种，分别是 undefined,null,bool,string,number,symbol(ES6 新增)。</li>
+<li>虽然 typeof null 返回的值是 object, 但是 null 不是对象，而是基本数据类型的一种。</li>
+<li>原始数据类型存储在栈内存，存储的是值。</li>
+<li>复杂数据类型的地址存储在栈内存，指向存储在堆内存的值。当我们把对象赋值给另外一个变量的时候，复制的是地址，指向同一块内存空间，当其中一个对象改变时，另一个对象也会变化。</li>
+</ul>
+<h5 id="typeof-是否正确判断类型-instanceof-呢？-instanceof-的实现原理是什么？"><a href="#typeof-是否正确判断类型-instanceof-呢？-instanceof-的实现原理是什么？" class="headerlink" title="typeof 是否正确判断类型? instanceof 呢？ instanceof 的实现原理是什么？"></a>typeof 是否正确判断类型? instanceof 呢？ instanceof 的实现原理是什么？</h5><ul>
+<li><p>typeof 能够正确的判断基本数据类型，但是除了 null, typeof null 输出的是对象。</p>
+</li>
+<li><p>typeof 不能正确的判断对象类型， typeof 一个函数可以输出 ‘function’, 而除此之外，输出的全是 object, 这种情况下，我们无法准确的知道对象的类型。</p>
+</li>
+<li><p>instanceof 可以准确的判断复杂数据类型，但是不能正确判断基本数据类型。</p>
+</li>
+<li>instanceof 是通过原型链判断的，A instanceof B, 在 A 的原型链中层层查找，是否有原型等于 B.prototype，如果一直找到 A 的原型链的顶端 (null; 即<code>Object.prototype.__proto__</code>), 仍然不等于 B.prototype，那么返回 false，否则返回 true。</li>
+</ul>
+<h5 id="和-有什么区别？"><a href="#和-有什么区别？" class="headerlink" title="== 和 === 有什么区别？"></a>== 和 === 有什么区别？</h5><p>=== 不需要进行类型转换，只有类型相同并且值相等时，才返回 true.</p>
+<p>== 如果两者类型不同，首先需要进行类型转换。具体流程如下:</p>
+<ol>
+<li>首先判断两者类型是否相同，如果相等，判断值是否相等；</li>
+<li>如果类型不同，进行类型转换；</li>
+<li>判断比较的是否是 null 或者是 undefined, 如果是, 返回 true；</li>
+<li>判断两者类型是否为 string 和 number, 如果是, 将字符串转换成 number；</li>
+<li>判断其中一方是否为 boolean, 如果是, 将 boolean 转为 number 再进行判断；</li>
+<li>判断其中一方是否为 object 且另一方为 string、number 或者 symbol , 如果是, 将 object 转为原始类型再进行判断。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">思考: [] == ![]</span><br><span class="line">我们来分析一下: [] == ![] 是 true 还是 false？</span><br><span class="line"></span><br><span class="line">1. 首先，我们需要知道 ! 优先级是高于 == (更多运算符优先级可查看: 运算符优先级）：</span><br><span class="line"></span><br><span class="line">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence</span><br><span class="line"></span><br><span class="line">2.![] 引用类型转换成布尔值都是 true, 因此![]的是 false</span><br><span class="line"></span><br><span class="line">3. 根据上面的比较步骤中的第五条，其中一方是 boolean，将 boolean 转为 number 再进行判断，false 转换成 number，对应的值是 0.</span><br><span class="line"></span><br><span class="line">4. 根据上面比较步骤中的第六条，有一方是 number，那么将 object 也转换成 Number, 空数组转换成数字，对应的值是 0.(空数组转换成数字，对应的值是 0，如果数组中只有一个数字，那么转成 number 就是这个数字，其它情况，均为 NaN)</span><br><span class="line"></span><br><span class="line">5.0 == 0; 为 true</span><br></pre></td></tr></table></figure>
+<h5 id="例举-3-种强制类型转换和-2-种隐式类型转换"><a href="#例举-3-种强制类型转换和-2-种隐式类型转换" class="headerlink" title="例举 3 种强制类型转换和 2 种隐式类型转换?"></a>例举 3 种强制类型转换和 2 种隐式类型转换?</h5><p>​    强制（parseInt,parseFloat,String()，Boolean()，Number()；<br>​    隐式（==）  -  if（）  !!（双非操作转换为布尔值）<br>​    1==”1”//true<br>​    null==undefined//true</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">Number（）</span><br><span class="line">  （1）如果是布尔值，true和false分别被转换为1和0</span><br><span class="line">  （2）如果是数字值，返回本身。</span><br><span class="line">  （3）如果是null，返回0.</span><br><span class="line">  （4）如果是undefined，返回NaN。</span><br><span class="line">  （5）如果是字符串，遵循以下规则：</span><br><span class="line">		  1、如果字符串中只包含数字，则将其转换为十进制（忽略前导0）</span><br><span class="line">		  2、如果字符串中包含有效的浮点格式，将其转换为浮点数值（忽略前导0）</span><br><span class="line">		  3、如果是空字符串，将其转换为0</span><br><span class="line">		  4、如果字符串中包含非以上格式，则将其转换为NaN</span><br><span class="line">  （6）如果是对象，则调用对象的valueOf()方法，然后依据前面的规则转换返回的值。如果转换的结果是NaN，则调用对象的toString()方法，再次依照前面的规则转换返回的字符串值。</span><br><span class="line">----</span><br><span class="line">parseInt(string, radix)函数，</span><br><span class="line">  （1）忽略字符串前面的空格，直至找到第一个非空字符</span><br><span class="line">  （2）如果第一个字符不是数字符号或者负号，返回NaN</span><br><span class="line">  （3）如果第一个字符是数字，则继续解析直至字符串解析完毕或者遇到一个非数字符号为止</span><br><span class="line">  （4）如果上步解析的结果以0开头，则将其当作八进制来解析；如果以x开头，则将其当作十六进制来解析</span><br><span class="line">  （5）如果指定radix参数，则以radix为基数进行解析</span><br><span class="line">----</span><br><span class="line">parseFloat（）</span><br><span class="line">	它的规则与parseInt基本相同，但也有点区别：</span><br><span class="line">	字符串中第一个小数点符号是有效的，</span><br><span class="line">	另外parseFloat会忽略所有前导0，</span><br><span class="line">	如果字符串包含一个可解析为整数的数，则返回整数值而不是浮点数值。</span><br><span class="line">----</span><br><span class="line">String(mix)函数，将任何类型的值转换为字符串，其规则为：</span><br><span class="line">  （1）如果有toString()方法，则调用该方法（不传递radix参数）并返回结果</span><br><span class="line">  （2）如果是null，返回”null”</span><br><span class="line">  （3）如果是undefined，返回”undefined”</span><br></pre></td></tr></table></figure>
+<h5 id="如何判断一个变量是不是数组？"><a href="#如何判断一个变量是不是数组？" class="headerlink" title="如何判断一个变量是不是数组？"></a>如何判断一个变量是不是数组？</h5><ul>
+<li>使用 Array.isArray 判断，如果返回 true, 说明是数组；</li>
+<li>使用 instanceof Array 判断，如果返回 true, 说明是数组；</li>
+<li>使用 Object.prototype.toString.call 判断，如果值是 [object Array], 说明是数组；</li>
+<li>通过 constructor 来判断，如果是数组，那么 <code>arr.constructor === Array</code>. (不准确，因为我们可以指定 <code>obj.constructor = Array</code>)。</li>
+</ul>
+<h5 id="类数组和数组的区别是什么？"><a href="#类数组和数组的区别是什么？" class="headerlink" title="类数组和数组的区别是什么？"></a>类数组和数组的区别是什么？</h5><p> 类数组:</p>
+<p>1）拥有 length 属性，其它属性（索引）为非负整数（对象中的索引会被当做字符串来处理）；</p>
+<p>2）不具有数组所具有的方法；</p>
+<p>类数组是一个普通对象，而真实的数组是 Array 类型。</p>
+<p>常见的类数组有: </p>
+<p>​    函数的参数 arugments, DOM 对象列表 (比如通过 document.querySelectorAll 得到的列表), jQuery 对象 (比如 $(“div”))。</p>
+<p>类数组可以转换为数组：</p>
+<p>任何定义了遍历器（Iterator）接口的对象，都可以用扩展运算符转为真正的数组。</p>
+<p>Array.from 方法用于将两类对象转为真正的数组：</p>
+<p>​    类似数组的对象（array-like object）和可遍历（iterable）的对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 第一种方法</span><br><span class="line">Array.prototype.slice.call(arrayLike, start);</span><br><span class="line">// 第二种方法</span><br><span class="line">[...arrayLike];</span><br><span class="line">// 第三种方法:</span><br><span class="line">Array.from(arrayLike);</span><br></pre></td></tr></table></figure>
+<h5 id="数组的哪些-API-会改变原数组？"><a href="#数组的哪些-API-会改变原数组？" class="headerlink" title="数组的哪些 API 会改变原数组？"></a>数组的哪些 API 会改变原数组？</h5><p>修改原数组的 API 有:</p>
+<p><code>splice/reverse/fill/copyWithin/sort/push/pop/unshift/shift</code></p>
+<p>不修改原数组的 API 有:</p>
+<p><code>slice/map/forEach/every/filter/reduce/entry/entries/find</code></p>
+<p>注: 数组的每一项是简单数据类型，且未直接操作数组的情况下。</p>
+<h5 id="为什么-0-1-0-2-0-3"><a href="#为什么-0-1-0-2-0-3" class="headerlink" title="为什么 0.1 + 0.2 != 0.3 ?"></a>为什么 0.1 + 0.2 != 0.3 ?</h5><p>0.1 + 0.2 != 0.3 是因为在进制转换和进阶运算的过程中出现精度损失。</p>
+<p>下面是详细解释:</p>
+<p>JavaScript 使用 Number 类型表示数字 (整数和浮点数)，使用 64 位表示一个数字。</p>
+<p><img src="/2019/04/17/面试题/640-1555513463079.webp" alt="img"></p>
+<p>图片说明:</p>
+<ul>
+<li>第 0 位：符号位，0 表示正数，1 表示负数 (s)；</li>
+<li>第 1 位到第 11 位：储存指数部分（e）；</li>
+<li>第 12 位到第 63 位：储存小数部分（即有效数字）f；</li>
+</ul>
+<p>计算机无法直接对十进制的数字进行运算, 需要先对照 IEEE 754 规范转换成二进制，然后对阶运算。</p>
+<ol>
+<li><p>进制转换</p>
+<p>0.1 和 0.2 转换成二进制后会无限循环</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0.1 -&gt; 0.0001100110011001...(无限循环)</span><br><span class="line">0.2 -&gt; 0.0011001100110011...(无限循环)</span><br></pre></td></tr></table></figure>
+<p>但是由于 IEEE 754 尾数位数限制，需要将后面多余的位截掉，这样在进制之间的转换中精度已经损失。</p>
+</li>
+<li><p>对阶运算</p>
+<p>由于指数位数不相同，运算时需要对阶运算 这部分也可能产生精度损失。</p>
+<p>按照上面两步运算（包括两步的精度损失），最后的结果是</p>
+<p>0.0100110011001100110011001100110011001100110011001100</p>
+<p>结果转换成十进制之后就是 0.30000000000000004。</p>
+</li>
+</ol>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><h5 id="let、const-以及-var-的区别是什么？"><a href="#let、const-以及-var-的区别是什么？" class="headerlink" title="let、const 以及 var 的区别是什么？"></a>let、const 以及 var 的区别是什么？</h5><ul>
+<li>let 和 const 定义的变量不会出现变量提升，而 var 定义的变量会提升；</li>
+<li>let 和 const 是 JS 中的块级作用域；</li>
+<li>let 和 const 不允许重复声明 (会抛出错误)；</li>
+<li>let 和 const 定义的变量在定义语句之前，如果使用会抛出错误 (形成了暂时性死区)，而 var 不会；</li>
+<li>const 声明一个只读的常量。一旦声明，常量的值就不能改变 (如果声明是一个对象，那么不能改变的是对象的引用地址)。</li>
+</ul>
+<h5 id="变量提升？暂时性死区？"><a href="#变量提升？暂时性死区？" class="headerlink" title="变量提升？暂时性死区？"></a>变量提升？暂时性死区？</h5><p>在代码块内，使用 let/const 命令声明变量之前，该变量都是不可用的 (会抛出错误)。这在语法上，称为“暂时性死区”。暂时性死区也意味着 typeof 不再是一个百分百安全的操作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">typeof x; // ReferenceError(暂时性死区，抛错)</span><br><span class="line">let x;</span><br><span class="line"></span><br><span class="line">typeof y; // 值是 undefined, 不会报错</span><br></pre></td></tr></table></figure>
+<p>暂时性死区的本质就是，只要一进入当前作用域，所要使用的变量就已经存在了，但是不可获取，只有等到声明变量的那一行代码出现，才可以获取和使用该变量。</p>
+<h5 id="如何正确的判断-this-箭头函数的-this-是什么？"><a href="#如何正确的判断-this-箭头函数的-this-是什么？" class="headerlink" title="如何正确的判断 this? 箭头函数的 this 是什么？"></a>如何正确的判断 this? 箭头函数的 this 是什么？</h5><p>this 的绑定规则有四种：默认绑定，隐式绑定，显式绑定，new 绑定.</p>
+<ol>
+<li>函数是否在 new 中调用 (new 绑定)，如果是，那么 this 绑定的是新创建的对象；</li>
+<li>函数是否通过 call,apply 调用，或者使用了 bind (即硬绑定)，如果是，那么 this 绑定的就是指定的对象；</li>
+<li>函数是否在某个上下文对象中调用 (隐式绑定)，如果是的话，this 绑定的是那个上下文对象。一般是 obj.foo()；</li>
+<li>如果以上都不是，那么使用默认绑定。如果在严格模式下，则绑定到 undefined，否则绑定到全局对象；</li>
+<li>如果把 null 或者 undefined 作为 this 的绑定对象传入 call、apply 或者 bind, 这些值在调用时会被忽略，实际应用的是默认绑定规则；</li>
+<li>箭头函数没有自己的 this, 它的 this 继承于上一层代码块的 this。</li>
+</ol>
+<h5 id="JS-执行上下文栈和作用域链的理解。"><a href="#JS-执行上下文栈和作用域链的理解。" class="headerlink" title="JS 执行上下文栈和作用域链的理解。"></a>JS 执行上下文栈和作用域链的理解。</h5><p>执行上下文就是当前 JavaScript 代码被解析和执行时所在环境, JS 执行上下文栈可以认为是一个存储函数调用的栈结构，遵循先进后出的原则。</p>
+<ul>
+<li>JavaScript 执行在单线程上，所有的代码都是排队执行。</li>
+<li>一开始浏览器执行全局的代码时，首先创建全局的执行上下文，压入执行栈的顶部。</li>
+<li>每当进入一个函数的执行就会创建函数的执行上下文，并且把它压入执行栈的顶部。当前函数执行 - 完成后，当前函数的执行上下文出栈，并等待垃圾回收。</li>
+<li>浏览器的 JS 执行引擎总是访问栈顶的执行上下文。</li>
+<li>全局上下文只有唯一的一个，它在浏览器关闭时出栈。</li>
+</ul>
+<p>作用域链:</p>
+<p>​     无论是 LHS 还是 RHS 查询，都会在当前的作用域开始查找，如果没有找到，就会向上级作用域继续查找目标标识符，每次上升一个作用域，一直到全局作用域为止。</p>
+<h5 id="什么是闭包？闭包的作用是什么？闭包有哪些使用场景？"><a href="#什么是闭包？闭包的作用是什么？闭包有哪些使用场景？" class="headerlink" title="什么是闭包？闭包的作用是什么？闭包有哪些使用场景？"></a>什么是闭包？闭包的作用是什么？闭包有哪些使用场景？</h5><p>闭包是指有权访问另一个函数作用域中的变量的函数，创建闭包最常用的方式就是在一个函数内部创建另一个函数。</p>
+<p>闭包的作用有:</p>
+<ol>
+<li>封装私有变量；</li>
+<li>模仿块级作用域 (ES5 中没有块级作用域)；</li>
+<li>实现 JS 的模块。</li>
+</ol>
+<h5 id="call、apply-有什么区别？call-aplly-和-bind-的内部是如何实现的？"><a href="#call、apply-有什么区别？call-aplly-和-bind-的内部是如何实现的？" class="headerlink" title="call、apply 有什么区别？call,aplly 和 bind 的内部是如何实现的？"></a>call、apply 有什么区别？call,aplly 和 bind 的内部是如何实现的？</h5><p>call 和 apply 的功能相同，区别在于传参的方式不一样:</p>
+<ul>
+<li>fn.call(obj, arg1, arg2, …), 调用一个函数, 具有一个指定的 this 值和分别地提供的参数 (参数的列表)。</li>
+<li><p>fn.apply(obj, [argsArray]), 调用一个函数，具有一个指定的 this 值，以及作为一个数组（或类数组对象）提供的参数。</p>
+<p>call 核心:</p>
+</li>
+<li><p>将函数设为传入参数的属性；</p>
+</li>
+<li>指定 this 到函数并传入给定参数执行函数；</li>
+<li>如果不传入参数或者参数为 null，默认指向为 window / global；</li>
+<li>删除参数上的函数。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">Function.prototype.call = function (context) &#123;</span><br><span class="line">    /** 如果第一个参数传入的是 null 或者是 undefined, 那么指向 this 指向 window/global */</span><br><span class="line">    /** 如果第一个参数传入的不是 null 或者是 undefined, 那么必须是一个对象 */</span><br><span class="line">    if (!context) &#123;</span><br><span class="line">        //context 为 null 或者是 undefined</span><br><span class="line">        context = typeof window === &apos;undefined&apos; ? global : window;</span><br><span class="line">    &#125;</span><br><span class="line">    context.fn = this; //this 指向的是当前的函数 (Function 的实例)</span><br><span class="line">    let args = [...arguments].slice(1);// 获取除了 this 指向对象以外的参数, 空数组 slice 后返回的仍然是空数组</span><br><span class="line">    let result = context.fn(...args); // 隐式绑定, 当前函数的 this 指向了 context.</span><br><span class="line">    delete context.fn;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 测试代码</span><br><span class="line">var foo = &#123;</span><br><span class="line">    name: &apos;Selina&apos;</span><br><span class="line">&#125;</span><br><span class="line">var name = &apos;Chirs&apos;;</span><br><span class="line">function bar(job, age) &#123;</span><br><span class="line">    console.log(this.name);</span><br><span class="line">    console.log(job, age);</span><br><span class="line">&#125;</span><br><span class="line">bar.call(foo, &apos;programmer&apos;, 20);</span><br><span class="line">// Selina programmer 20</span><br><span class="line">bar.call(null, &apos;teacher&apos;, 25);</span><br><span class="line">// 浏览器环境: Chirs teacher 25; node 环境: undefined teacher 25</span><br></pre></td></tr></table></figure>
+<p> apply</p>
+<p>apply 的实现和 call 很类似，但是需要注意他们的参数是不一样的，apply 的第二个参数是数组或类数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Function.prototype.apply = function (context, rest) &#123;</span><br><span class="line">    if (!context) &#123;</span><br><span class="line">        //context 为 null 或者是 undefined 时, 设置默认值</span><br><span class="line">        context = typeof window === &apos;undefined&apos; ? global : window;</span><br><span class="line">    &#125;</span><br><span class="line">    context.fn = this;</span><br><span class="line">    let result = context.fn(...rest);</span><br><span class="line">    delete context.fn;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br><span class="line">var foo = &#123;</span><br><span class="line">    name: &apos;Selina&apos;</span><br><span class="line">&#125;</span><br><span class="line">var name = &apos;Chirs&apos;;</span><br><span class="line">function bar(job, age) &#123;</span><br><span class="line">    console.log(this.name);</span><br><span class="line">    console.log(job, age);</span><br><span class="line">&#125;</span><br><span class="line">bar.apply(foo, [&apos;programmer&apos;, 20]);</span><br><span class="line">// Selina programmer 20</span><br><span class="line">bar.apply(null, [&apos;teacher&apos;, 25]);</span><br><span class="line">// 浏览器环境: Chirs programmer 20; node 环境: undefined teacher 25</span><br></pre></td></tr></table></figure>
+<p> bind</p>
+<p>bind 和 call/apply 有一个很重要的区别，一个函数被 call/apply 的时候，会直接调用，但是 bind 会创建一个新函数。当这个新函数被调用时，bind() 的第一个参数将作为它运行时的 this，之后的一序列参数将会在传递的实参前传入作为它的参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Function.prototype.bind = function(context) &#123;</span><br><span class="line">    if(typeof this !== &quot;function&quot;)&#123;</span><br><span class="line">        throw new TypeError(&quot;not a function&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    let self = this;</span><br><span class="line">    let args = [...arguments].slice(1);</span><br><span class="line">    function Fn() &#123;&#125;;</span><br><span class="line">    Fn.prototype = this.prototype;</span><br><span class="line">    let bound = function() &#123;</span><br><span class="line">        let res = [...args, ...arguments]; //bind 传递的参数和函数调用时传递的参数拼接</span><br><span class="line">        context = this instanceof Fn ? this : context || this;</span><br><span class="line">        return self.apply(context, res);</span><br><span class="line">    &#125;</span><br><span class="line">    // 原型链</span><br><span class="line">    bound.prototype = new Fn();</span><br><span class="line">    return bound;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var name = &apos;Jack&apos;;</span><br><span class="line">function person(age, job, gender)&#123;</span><br><span class="line">    console.log(this.name , age, job, gender);</span><br><span class="line">&#125;</span><br><span class="line">var Yve = &#123;name : &apos;Yvette&apos;&#125;;</span><br><span class="line">let result = person.bind(Yve, 22, &apos;enginner&apos;)(&apos;female&apos;);</span><br></pre></td></tr></table></figure>
+<h5 id="new-的原理是什么？通过-new-的方式创建对象和通过字面量创建有什么区别？"><a href="#new-的原理是什么？通过-new-的方式创建对象和通过字面量创建有什么区别？" class="headerlink" title="new 的原理是什么？通过 new 的方式创建对象和通过字面量创建有什么区别？"></a>new 的原理是什么？通过 new 的方式创建对象和通过字面量创建有什么区别？</h5><p> new</p>
+<ol>
+<li>创建一个新对象；</li>
+<li>这个新对象会被执行 [[原型]] 连接；</li>
+<li>将构造函数的作用域赋值给新对象，即 this 指向这个新对象；</li>
+<li>如果函数没有返回其他对象，那么 new 表达式中的函数调用会自动返回这个新对象。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function new(func) &#123;</span><br><span class="line">    lat target = &#123;&#125;;</span><br><span class="line">    target.__proto__ = func.prototype;</span><br><span class="line">    let res = func.call(target);</span><br><span class="line">    if (typeof(res) == &quot;object&quot; || typeof(res) == &quot;function&quot;) &#123;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">    return target;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>字面量创建对象，不会调用 Object 构造函数， 简洁且性能更好。</p>
+<p>new Object() 方式创建对象本质上是方法调用，涉及到在 proto 链中遍历该方法，当找到该方法后，又会生产方法调用必须的 堆栈信息，方法调用结束后，还要释放该堆栈，性能不如字面量的方式。</p>
+<p>通过对象字面量定义对象时，不会调用 Object 构造函数。</p>
+<h5 id="谈谈你对原型的理解？"><a href="#谈谈你对原型的理解？" class="headerlink" title="谈谈你对原型的理解？"></a>谈谈你对原型的理解？</h5><p>在 JavaScript 中，每当定义一个对象（函数也是对象）时候，对象中都会包含一些预定义的属性。其中每个函数对象都有一个 prototype 属性，这个属性指向函数的原型对象。使用原型对象的好处是所有对象实例共享它所包含的属性和方法。</p>
+<h5 id="什么是原型链？【原型链解决的是什么问题？】"><a href="#什么是原型链？【原型链解决的是什么问题？】" class="headerlink" title="什么是原型链？【原型链解决的是什么问题？】"></a>什么是原型链？【原型链解决的是什么问题？】</h5><p>原型链解决的主要是继承问题。</p>
+<p>每个对象拥有一个原型对象，通过 <strong>proto</strong> (读音: dunder proto) 指针指向其原型对象，并从中继承方法和属性，同时原型对象也可能拥有原型，这样一层一层，最终指向 null(<code>Object.proptotype.__proto__</code> 指向的是 null)。这种关系被称为原型链 (prototype chain)，通过原型链一个对象可以拥有定义在其他对象中的属性和方法。</p>
+<p>构造函数 Parent、Parent.prototype 和 实例 p 的关系如下:<code>(p.__proto__ === Parent.prototype)</code></p>
+<p><img src="/2019/04/17/面试题/640.webp" alt="img"></p>
+<h5 id="prototype-和-proto-区别是什么？"><a href="#prototype-和-proto-区别是什么？" class="headerlink" title="prototype 和 __proto__ 区别是什么？"></a>prototype 和 <code>__proto__</code> 区别是什么？</h5><p>prototype 是构造函数的属性。</p>
+<p><code>__proto__</code> 是每个实例都有的属性，可以访问 [[prototype]] 属性。</p>
+<p>实例的<code>__proto__</code> 与其构造函数的 prototype 指向的是同一个对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function Student(name) &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">&#125;</span><br><span class="line">Student.prototype.setAge = function()&#123;</span><br><span class="line">    this.age=20;</span><br><span class="line">&#125;</span><br><span class="line">let Jack = new Student(&apos;jack&apos;);</span><br><span class="line">console.log(Jack.__proto__);</span><br><span class="line">//console.log(Object.getPrototypeOf(Jack));;</span><br><span class="line">console.log(Student.prototype);</span><br><span class="line">console.log(Jack.__proto__ === Student.prototype);//true</span><br></pre></td></tr></table></figure>
+<h5 id="使用-ES5-实现一个继承？"><a href="#使用-ES5-实现一个继承？" class="headerlink" title="使用 ES5 实现一个继承？"></a>使用 ES5 实现一个继承？</h5><p> 组合继承 (最常用的继承方式)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function SuperType() &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.colors = [&apos;red&apos;, &apos;blue&apos;, &apos;green&apos;];</span><br><span class="line">&#125;</span><br><span class="line">SuperType.prototype.sayName = function() &#123;</span><br><span class="line">    console.log(this.name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function SubType(name, age) &#123;</span><br><span class="line">    SuperType.call(this, name);</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line">SubType.prototype = new SuperType();</span><br><span class="line">SubType.prototype.constructor = SubType;</span><br><span class="line"></span><br><span class="line">SubType.prototype.sayAge = function() &#123;</span><br><span class="line">    console.log(this.age);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="什么是深拷贝？深拷贝和浅拷贝有什么区别？"><a href="#什么是深拷贝？深拷贝和浅拷贝有什么区别？" class="headerlink" title="什么是深拷贝？深拷贝和浅拷贝有什么区别？"></a>什么是深拷贝？深拷贝和浅拷贝有什么区别？</h5><p>浅拷贝是指只复制第一层对象，但是当对象的属性是引用类型时，实质复制的是其引用，当引用指向的值改变时也会跟着变化。</p>
+<p>深拷贝复制变量值，对于非基本类型的变量，则递归至基本类型变量后，再复制。深拷贝后的对象与原来的对象是完全隔离的，互不影响，对一个对象的修改并不会影响另一个对象。</p>
+<p>实现一个深拷贝:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">function deepClone(obj) &#123; // 递归拷贝</span><br><span class="line">    if(obj === null) return null; //null 的情况</span><br><span class="line">    if(obj instanceof RegExp) return new RegExp(obj);</span><br><span class="line">    if(obj instanceof Date) return new Date(obj);</span><br><span class="line">    if(typeof obj !== &apos;object&apos;) &#123;</span><br><span class="line">        // 如果不是复杂数据类型，直接返回</span><br><span class="line">        return obj;</span><br><span class="line">    &#125;</span><br><span class="line">    /**</span><br><span class="line">     * 如果 obj 是数组，那么 obj.constructor 是 [Function: Array]</span><br><span class="line">     * 如果 obj 是对象，那么 obj.constructor 是 [Function: Object]</span><br><span class="line">     */</span><br><span class="line">    let t = new obj.constructor();</span><br><span class="line">    for(let key in obj) &#123;</span><br><span class="line">        // 如果 obj[key] 是复杂数据类型，递归</span><br><span class="line">        t[key] = deepClone(obj[key]);</span><br><span class="line">    &#125;</span><br><span class="line">    return t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5><ul>
+<li><p>原型链继承 。基于原型链，既是父类的实例，也是子类的实例，无法实现多继承</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function Cat()&#123; &#125;</span><br><span class="line">Cat.prototype = new Animal();</span><br><span class="line">Cat.prototype.name = &apos;cat&apos;;</span><br><span class="line">var cat = new Cat();</span><br><span class="line">console.log(cat instanceof Animal); //true</span><br><span class="line">console.log(cat instanceof Cat); //true</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>构造继承。只能继承父类实例的属性和方法，不能继承原型上的属性和方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function Cat(name)&#123;</span><br><span class="line">  Animal.call(this);</span><br><span class="line">  this.name = name || &apos;Tom&apos;;</span><br><span class="line">&#125;</span><br><span class="line">var cat = new Cat();</span><br><span class="line">console.log(cat instanceof Animal); // false</span><br><span class="line">console.log(cat instanceof Cat); // true</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>实例继承和拷贝继承</p>
+<pre><code>实例继承：为父类实例添加新特性，作为子类实例返回
+拷贝继承：拷贝父类元素上的属性和方法
+</code></pre></li>
+<li><p>组合继承 。可以继承实例属性/方法，也可以继承原型属性/方法；调用了两次父类构造函数，生成了两份实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Cat(name)&#123;</span><br><span class="line">  Animal.call(this);</span><br><span class="line">  this.name = name || &apos;Tom&apos;;</span><br><span class="line">&#125;</span><br><span class="line">Cat.prototype = new Animal();</span><br><span class="line">Cat.prototype.constructor = Cat;</span><br><span class="line">// Test Code</span><br><span class="line">var cat = new Cat();</span><br><span class="line">console.log(cat instanceof Animal); // true</span><br><span class="line">console.log(cat instanceof Cat); // true</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>寄生组合继承。    通过寄生方式，砍掉父类的实例属性，这样，在调用两次父类的构造的时候，就不会初始化两次实例方法/属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function Cat(name)&#123;</span><br><span class="line">   Animal.call(this);</span><br><span class="line">   this.name = name || &apos;Tom&apos;;</span><br><span class="line"> &#125;</span><br><span class="line"> (function()&#123;</span><br><span class="line">   // 创建一个没有实例方法的类</span><br><span class="line">   var Super = function()&#123;&#125;;</span><br><span class="line">   Super.prototype = Animal.prototype;</span><br><span class="line">   //将实例作为子类的原型</span><br><span class="line">   Cat.prototype = new Super();</span><br><span class="line"> &#125;)();</span><br><span class="line"> // Test Code</span><br><span class="line"> var cat = new Cat();</span><br><span class="line"> console.log(cat instanceof Animal); // true</span><br><span class="line"> console.log(cat instanceof Cat); //true</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="函数方法"><a href="#函数方法" class="headerlink" title="函数方法"></a>函数方法</h4><h5 id="for-of-for-in-和-forEach-map-的区别"><a href="#for-of-for-in-和-forEach-map-的区别" class="headerlink" title="for of , for in 和 forEach,map 的区别"></a>for of , for in 和 forEach,map 的区别</h5><ul>
+<li>for…of 循环：具有 iterator 接口，就可以用 for…of 循环遍历它的成员 (属性值)。for…of 循环可以使用的范围包括数组、Set 和 Map 结构、某些类似数组的对象、Generator 对象，以及字符串。for…of 循环调用遍历器接口，数组的遍历器接口只返回具有数字索引的属性。对于普通的对象，for…of 结构不能直接使用，会报错，必须部署了 Iterator 接口后才能使用。可以中断循环。</li>
+<li>for…in 循环：遍历对象自身的和继承的可枚举的属性， 不能直接获取属性值。可以中断循环。</li>
+<li>forEach: 只能遍历数组，不能中断，没有返回值 (或认为返回值是 undefined)。</li>
+<li>map: 只能遍历数组，不能中断，返回值是修改后的数组。</li>
+</ul>
+<h5 id="防抖和节流的区别是什么？防抖和节流的实现。"><a href="#防抖和节流的区别是什么？防抖和节流的实现。" class="headerlink" title="防抖和节流的区别是什么？防抖和节流的实现。"></a>防抖和节流的区别是什么？防抖和节流的实现。</h5><p>防抖和节流的作用都是防止函数多次调用。区别在于，假设一个用户一直触发这个函数，且每次触发函数的间隔小于设置的时间，防抖的情况下只会调用一次，而节流的情况会每隔一定时间调用一次函数。</p>
+<p><strong>防抖 (debounce): n 秒内函数只会执行一次，如果 n 秒内高频事件再次被触发，则重新计算时间。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">function debounce(func, wait, immediate=true) &#123;</span><br><span class="line">    let timeout, context, args;</span><br><span class="line">        // 延迟执行函数</span><br><span class="line">        const later = () =&gt; setTimeout(() =&gt; &#123;</span><br><span class="line">            // 延迟函数执行完毕，清空定时器</span><br><span class="line">            timeout = null</span><br><span class="line">            // 延迟执行的情况下，函数会在延迟函数中执行</span><br><span class="line">            // 使用到之前缓存的参数和上下文</span><br><span class="line">            if (!immediate) &#123;</span><br><span class="line">                func.apply(context, args);</span><br><span class="line">                context = args = null;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, wait);</span><br><span class="line">        let debounced = function (...params) &#123;</span><br><span class="line">            if (!timeout) &#123;</span><br><span class="line">                timeout = later();</span><br><span class="line">                if (immediate) &#123;</span><br><span class="line">                    // 立即执行</span><br><span class="line">                    func.apply(this, params);</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    // 闭包</span><br><span class="line">                    context = this;</span><br><span class="line">                    args = params;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                clearTimeout(timeout);</span><br><span class="line">                timeout = later();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    debounced.cancel = function () &#123;</span><br><span class="line">        clearTimeout(timeout);</span><br><span class="line">        timeout = null;</span><br><span class="line">    &#125;;</span><br><span class="line">    return debounced;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p> 防抖的应用场景</p>
+<ul>
+<li>每次 resize/scroll 触发统计事件；</li>
+<li>文本输入的验证（连续输入文字后发送 AJAX 请求进行验证，验证一次就好）。</li>
+</ul>
+<p><strong>节流 (throttle): 高频事件在规定时间内只会执行一次，执行一次后，只有大于设定的执行周期后才会执行第二次。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">//underscore.js</span><br><span class="line">function throttle(func, wait, options) &#123;</span><br><span class="line">    var timeout, context, args, result;</span><br><span class="line">    var previous = 0;</span><br><span class="line">    if (!options) options = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    var later = function () &#123;</span><br><span class="line">        previous = options.leading === false ? 0 : Date.now() || new Date().getTime();</span><br><span class="line">        timeout = null;</span><br><span class="line">        result = func.apply(context, args);</span><br><span class="line">        if (!timeout) context = args = null;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    var throttled = function () &#123;</span><br><span class="line">        var now = Date.now() || new Date().getTime();</span><br><span class="line">        if (!previous &amp;&amp; options.leading === false) previous = now;</span><br><span class="line">        var remaining = wait - (now - previous);</span><br><span class="line">        context = this;</span><br><span class="line">        args = arguments;</span><br><span class="line">        if (remaining &lt;= 0 || remaining &gt; wait) &#123;</span><br><span class="line">            if (timeout) &#123;</span><br><span class="line">                clearTimeout(timeout);</span><br><span class="line">                timeout = null;</span><br><span class="line">            &#125;</span><br><span class="line">            previous = now;</span><br><span class="line">            result = func.apply(context, args);</span><br><span class="line">            if (!timeout) context = args = null;</span><br><span class="line">        &#125; else if (!timeout &amp;&amp; options.trailing !== false) &#123;</span><br><span class="line">            // 判断是否设置了定时器和 trailing</span><br><span class="line">            timeout = setTimeout(later, remaining);</span><br><span class="line">        &#125;</span><br><span class="line">        return result;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    throttled.cancel = function () &#123;</span><br><span class="line">        clearTimeout(timeout);</span><br><span class="line">        previous = 0;</span><br><span class="line">        timeout = context = args = null;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    return throttled;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>函数节流的应用场景有:</strong></p>
+<ul>
+<li>DOM 元素的拖拽功能实现（mousemove）；</li>
+<li>射击游戏的 mousedown/keydown 事件（单位时间只能发射一颗子弹）；</li>
+<li>计算鼠标移动的距离（mousemove）；</li>
+<li>Canvas 模拟画板功能（mousemove）；</li>
+<li>搜索联想（keyup）；</li>
+<li>监听滚动事件判断是否到页面底部自动加载更多：给 scroll 加了 debounce 后，只有用户停止滚动后，才会判断是否到了页面底部；如果是 throttle 的话，只要页面滚动就会间隔一段时间判断一次。</li>
+</ul>
+<h5 id="setTimeout-倒计时为什么会出现误差？"><a href="#setTimeout-倒计时为什么会出现误差？" class="headerlink" title="setTimeout 倒计时为什么会出现误差？"></a>setTimeout 倒计时为什么会出现误差？</h5><p>setTimeout() 只是将事件插入了“任务队列”，必须等当前代码（执行栈）执行完，主线程才会去执行它指定的回调函数。要是当前代码消耗时间很长，也有可能要等很久，所以并没办法保证回调函数一定会在 setTimeout() 指定的时间执行。所以， setTimeout() 的第二个参数表示的是最少时间，并非是确切时间。</p>
+<p>HTML5 标准规定了 setTimeout() 的第二个参数的最小值不得小于 4 毫秒，如果低于这个值，则默认是 4 毫秒。在此之前。老版本的浏览器都将最短时间设为 10 毫秒。另外，对于那些 DOM 的变动（尤其是涉及页面重新渲染的部分），通常是间隔 16 毫秒执行。这时使用 requestAnimationFrame() 的效果要好于 setTimeout()。</p>
+<h5 id="什么是函数柯里化？实现-sum-1-2-3-返回结果是-1-2-3-之和"><a href="#什么是函数柯里化？实现-sum-1-2-3-返回结果是-1-2-3-之和" class="headerlink" title="什么是函数柯里化？实现 sum(1)(2)(3) 返回结果是 1,2,3 之和"></a>什么是函数柯里化？实现 sum(1)(2)(3) 返回结果是 1,2,3 之和</h5><p>函数柯里化是把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function sum(a) &#123;</span><br><span class="line">    return function(b) &#123;</span><br><span class="line">        return function(c) &#123;</span><br><span class="line">            return a+b+c;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(sum(1)(2)(3)); // 6</span><br></pre></td></tr></table></figure>
+<p>引申：实现一个 curry 函数，将普通函数进行柯里化:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function curry(fn, args = []) &#123;</span><br><span class="line">    return function()&#123;</span><br><span class="line">        let rest = [...args, ...arguments];</span><br><span class="line">        if (rest.length &lt; fn.length) &#123;</span><br><span class="line">            return curry.call(this,fn,rest);</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            return fn.apply(this,rest);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//test</span><br><span class="line">function sum(a,b,c) &#123;</span><br><span class="line">    return a+b+c;</span><br><span class="line">&#125;</span><br><span class="line">let sumFn = curry(sum);</span><br><span class="line">console.log(sumFn(1)(2)(3)); //6</span><br><span class="line">console.log(sumFn(1)(2, 3)); //6</span><br></pre></td></tr></table></figure>
+<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><h5 id="什么是事件流"><a href="#什么是事件流" class="headerlink" title="什么是事件流"></a>什么是事件流</h5><p>事件流描述的是从页面中接收事件的顺序,DOM2级事件流包括下面几个阶段。</p>
+<ul>
+<li>事件捕获阶段<ul>
+<li>处于目标阶段</li>
+<li>事件冒泡阶段</li>
+</ul>
+</li>
+</ul>
+<p>addEventListener：addEventListener 是DOM2 级事件新增的指定事件处理程序的操作，这个方法接收3个参数：要处理的事件名、作为事件处理程序的函数和一个布尔值。最后这个布尔值参数如果是true，表示在捕获阶段调用事件处理程序；如果是false，表示在冒泡阶段调用事件处理程序。<br>IE只支持事件冒泡。</p>
+<h5 id="如何让事件先冒泡后捕获？"><a href="#如何让事件先冒泡后捕获？" class="headerlink" title="如何让事件先冒泡后捕获？"></a>如何让事件先冒泡后捕获？</h5><p>​     在DOM标准事件模型中，是先捕获后冒泡。但是如果要实现先冒泡后捕获的效果，对于同一个事件，监听捕获和冒泡，分别对应相应的处理函数，监听到捕获事件，先暂缓执行，直到冒泡事件被捕获后再执行捕获事件。</p>
+<h5 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h5><p> 简介：事件委托指的是，不在事件的发生地（直接dom）上设置监听函数，而是在其父元素上设置监听函数，通过事件冒泡，父元素可以监听到子元素上事件的触发，通过判断事件发生元素DOM的类型，来做出不同的响应。<br>举例：最经典的就是ul和li标签的事件监听，比如我们在添加事件时候，采用事件委托机制，不会在li标签上直接添加，而是在ul父元素上添加。<br>好处：比较合适动态元素的绑定，新添加的子元素也会有监听函数，也可以有事件触发机制。</p>
+<h5 id="mouseover-和-mouseenter的区别"><a href="#mouseover-和-mouseenter的区别" class="headerlink" title="mouseover 和 mouseenter的区别"></a>mouseover 和 mouseenter的区别</h5><ul>
+<li>mouseover：当鼠标移入元素或其子元素都会触发事件，所以有一个重复触发，冒泡的过程。对应的移出事件是mouseout<ul>
+<li>mouseenter：当鼠标移入元素本身（不包含元素的子元素）会触发事件，也就是不会冒泡，对应的移出事件是mouseleave</li>
+</ul>
+</li>
+</ul>
+<h5 id="拖拽功能实现"><a href="#拖拽功能实现" class="headerlink" title="拖拽功能实现"></a>拖拽功能实现</h5><ul>
+<li><p>首先是三个事件，分别是mousedown，mousemove，mouseup 当鼠标点击按下的时候，需要一个tag标识此时已经按下，可以执行mousemove里面的具体方法。</p>
+<ul>
+<li>clientX，clientY标识的是鼠标的坐标，offsetX和offsetY表示元素的初始坐标</li>
+<li>移动距离：    鼠标移动时候的坐标-鼠标按下去时候的坐标。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>定位信息：    鼠标移动时候的坐标-鼠标按下去时候的坐标+元素初始情况下的offetLeft.</li>
+<li>拖拽的同时是绝对定位，改变的是绝对定位条件下的left 以及top等等值。</li>
+</ul>
+<p>补充：也可以通过html5的拖放（Drag 和 drop）来实现<br>HTML5 drag api</p>
+<ul>
+<li>dragstart：事件主体是被拖放元素，在开始拖放被拖放元素时触发，。</li>
+<li>darg：事件主体是被拖放元素，在正在拖放被拖放元素时触发。</li>
+<li>dragenter：事件主体是目标元素，在被拖放元素进入某元素时触发。</li>
+<li>dragover：事件主体是目标元素，在被拖放在某元素内移动时触发。</li>
+<li>dragleave：事件主体是目标元素，在被拖放元素移出目标元素是触发。</li>
+<li>drop：事件主体是目标元素，在目标元素完全接受被拖放元素时触发。</li>
+<li>dragend：事件主体是被拖放元素，在整个拖放操作结束时触发<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;拖动img_w3slogo.gif图片到矩形框中:&lt;/p&gt;</span><br><span class="line">&lt;div id=&quot;div1&quot; ondrop=&quot;drop(event)&quot; ondragover=&quot;allowDrop(event)&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function allowDrop(ev)&#123;</span><br><span class="line">	// 调用 preventDefault() 来避免浏览器对数据的默认处理（drop 事件的默认行为是以链接形式打开）</span><br><span class="line">    ev.preventDefault();    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function drag(ev)&#123;</span><br><span class="line">    ev.dataTransfer.setData(&quot;Text&quot;,ev.target.id);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function drop(ev)&#123;</span><br><span class="line">    ev.preventDefault();</span><br><span class="line">    // 获得被拖的数据。该方法将返回在 setData() 方法中设置为相同类型的任何数据。</span><br><span class="line">    var data=ev.dataTransfer.getData(&quot;Text&quot;);    </span><br><span class="line">    ev.target.appendChild(document.getElementById(data));   </span><br><span class="line">    // 被拖数据是被拖元素的 id (&quot;drag1&quot;) 把被拖元素追加到放置元素（目标元素）中</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="BOM-amp-amp-DOM"><a href="#BOM-amp-amp-DOM" class="headerlink" title="BOM &amp;&amp; DOM"></a>BOM &amp;&amp; DOM</h4><h5 id="js的各种位置，比如clientHeight-scrollHeight-offsetHeight-以及scrollTop-offsetTop-clientTop的区别？"><a href="#js的各种位置，比如clientHeight-scrollHeight-offsetHeight-以及scrollTop-offsetTop-clientTop的区别？" class="headerlink" title="js的各种位置，比如clientHeight,scrollHeight,offsetHeight ,以及scrollTop, offsetTop,clientTop的区别？"></a>js的各种位置，比如clientHeight,scrollHeight,offsetHeight ,以及scrollTop, offsetTop,clientTop的区别？</h5><ul>
+<li>clientHeight：表示的是可视区域的高度，不包含border和滚动条</li>
+<li>offsetHeight：表示可视区域的高度，包含了border和滚动条<ul>
+<li>scrollHeight：表示了所有区域的高度，包含了因为滚动被隐藏的部分。</li>
+<li>clientTop：表示边框border的厚度，在未指定的情况下一般为0</li>
+<li>scrollTop：滚动后被隐藏的高度，获取对象相对于由offsetParent属性指定的父坐标(css定位的元素或body元素)距离顶端的高度。</li>
+</ul>
+</li>
+</ul>
+<h5 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h5><p>location.href– 返回或设置当前文档的URL<br>location.search – 返回URL中的查询字符串部分。例如 <a href="http://www.dreamdu.com/dreamdu.php?id=5&amp;name=dreamdu" target="_blank" rel="noopener">http://www.dreamdu.com/dreamdu.php?id=5&amp;name=dreamdu</a> 返回包括(?)后面的内容?id=5&amp;name=dreamdu<br>location.hash – 返回URL#后面的内容，如果没有#，返回空<br>location.host – 返回URL中的域名部分，例如<a href="http://www.dreamdu.com" target="_blank" rel="noopener">www.dreamdu.com</a><br>location.hostname – 返回URL中的主域名部分，例如dreamdu.com<br>location.pathname – 返回URL的域名后的部分。例如 <a href="http://www.dreamdu.com/xhtml/" target="_blank" rel="noopener">http://www.dreamdu.com/xhtml/</a> 返回/xhtml/<br>location.port – 返回URL中的端口部分。例如 <a href="http://www.dreamdu.com:8080/xhtml/" target="_blank" rel="noopener">http://www.dreamdu.com:8080/xhtml/</a> 返回8080<br>location.protocol – 返回URL中的协议部分。例如 <a href="http://www.dreamdu.com:8080/xhtml/" target="_blank" rel="noopener">http://www.dreamdu.com:8080/xhtml/</a> 返回(//)前面的内容http:<br>location.assign – 设置当前文档的URL<br>location.replace() – 设置当前文档的URL，并且在history对象的地址列表中移除这个URL<br>location.replace(url); location.reload() – 重载当前页面</p>
+<h5 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h5><p>history.go() – 前进或后退指定的页面数<br>history.go(num); history.back() – 后退一页<br> history.forward() – 前进一页</p>
+<h5 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a>navigator对象</h5><p>navigator.userAgent – 返回用户代理头的字符串表示(就是包括浏览器版本信息等的字符串)<br>navigator.cookieEnabled – 返回浏览器是否支持(启用)cookie</p>
+<h4 id="ES-6"><a href="#ES-6" class="headerlink" title="ES 6"></a>ES 6</h4><h5 id="ES6-中的-class-和-ES5-的类有什么区别？"><a href="#ES6-中的-class-和-ES5-的类有什么区别？" class="headerlink" title="ES6 中的 class 和 ES5 的类有什么区别？"></a>ES6 中的 class 和 ES5 的类有什么区别？</h5><p>1.ES6 class 内部所有定义的方法都是不可枚举的；</p>
+<p>2.ES6 class 必须使用 new 调用；</p>
+<p>3.ES6 class 不存在变量提升；</p>
+<p>4.ES6 class 默认即是严格模式；</p>
+<p>5.ES6 class 子类必须在父类的构造函数中调用 super()，这样才有 this 对象 ;ES5 中类继承的关系是相反的，先有子类的 this，然后用父类的方法应用在 this 上。</p>
+<h5 id="ES6-新的特性有哪些？"><a href="#ES6-新的特性有哪些？" class="headerlink" title="ES6 新的特性有哪些？"></a>ES6 新的特性有哪些？</h5><ol>
+<li><p>新增了块级作用域 (let,const)</p>
+</li>
+<li><p>提供了定义类的语法糖 (class)</p>
+</li>
+<li><p>新增了一种基本数据类型 (Symbol)</p>
+</li>
+<li><p>新增了变量的解构赋值</p>
+</li>
+<li><p>函数参数允许设置默认值，引入了 rest 参数，新增了箭头函数</p>
+</li>
+<li><p>数组新增了一些 API，如 isArray / from / of 方法 ; 数组实例新增了 entries()，keys() 和 values() 等方法</p>
+</li>
+<li><p>对象和数组新增了扩展运算符</p>
+</li>
+<li>ES6 新增了模块化 (import/export)</li>
+<li>ES6 新增了 Set 和 Map 数据结构</li>
+<li>ES6 原生提供 Proxy 构造函数，用来生成 Proxy 实例</li>
+<li>ES6 新增了生成器 (Generator) 和遍历器 (Iterator)</li>
+</ol>
+<h5 id="promise-有几种状态-Promise-有什么优缺点"><a href="#promise-有几种状态-Promise-有什么优缺点" class="headerlink" title="promise 有几种状态, Promise 有什么优缺点 ?"></a>promise 有几种状态, Promise 有什么优缺点 ?</h5><p>promise 有三种状态: fulfilled, rejected, pending。</p>
+<p> Promise 的优点</p>
+<ol>
+<li><p>一旦状态改变，就不会再变，任何时候都可以得到这个结果；</p>
+</li>
+<li><p>可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。</p>
+<p>Promise 的缺点</p>
+</li>
+<li><p>无法取消 Promise；</p>
+</li>
+<li><p>当处于 pending 状态时，无法得知目前进展到哪一个阶段。</p>
+</li>
+</ol>
+<h5 id="Promise-构造函数是同步还是异步执行，then-呢-promise-如何实现-then-处理"><a href="#Promise-构造函数是同步还是异步执行，then-呢-promise-如何实现-then-处理" class="headerlink" title="Promise 构造函数是同步还是异步执行，then 呢 ?promise 如何实现 then 处理 ?"></a>Promise 构造函数是同步还是异步执行，then 呢 ?promise 如何实现 then 处理 ?</h5><p>Promise 的构造函数是同步执行的。then 是异步执行的。</p>
+<p>promise 的 then 实现，详见: Promise 源码实现：</p>
+<p><a href="https://juejin.im/post/5c88e427f265da2d8d6a1c84" target="_blank" rel="noopener">https://juejin.im/post/5c88e427f265da2d8d6a1c84</a></p>
+<h5 id="Promise-和-setTimeout-的区别"><a href="#Promise-和-setTimeout-的区别" class="headerlink" title="Promise 和 setTimeout 的区别 ?"></a>Promise 和 setTimeout 的区别 ?</h5><p>Promise 是微任务，setTimeout 是宏任务，同一个事件循环中，promise.then 总是先于 setTimeout 执行。</p>
+<h5 id="Promise-all"><a href="#Promise-all" class="headerlink" title="Promise.all"></a>Promise.all</h5><ol>
+<li><p>如果传入的参数是一个空的可迭代对象，那么此 promise 对象回调完成 (resolve), 只有此情况，是同步执行的，其它都是异步返回的；</p>
+</li>
+<li><p>如果传入的参数不包含任何 promise，则返回一个异步完成.promises 中所有的 promise 都“完成”时或参数中不包含 promise 时回调完成；</p>
+</li>
+<li><p>如果参数中有一个 promise 失败，那么 Promise.all 返回的 promise 对象失败；</p>
+</li>
+<li><p>在任何情况下，Promise.all 返回的 promise 的完成状态的结果都是一个数组。</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">Promise.all = function (promises) &#123;</span><br><span class="line">    return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        let index = 0;</span><br><span class="line">        let result = [];</span><br><span class="line">        if (promises.length === 0) &#123;</span><br><span class="line">            resolve(result);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            setTimeout(() =&gt; &#123;</span><br><span class="line">                function processValue(i, data) &#123;</span><br><span class="line">                    result[i] = data;</span><br><span class="line">                    if (++index === promises.length) &#123;</span><br><span class="line">                        resolve(result);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                for (let i = 0; i &lt; promises.length; i++) &#123;</span><br><span class="line">                    //promises[i] 可能是普通值</span><br><span class="line">                    Promise.resolve(promises[i]).then((data) =&gt; &#123;</span><br><span class="line">                        processValue(i, data);</span><br><span class="line">                    &#125;, (err) =&gt; &#123;</span><br><span class="line">                        reject(err);</span><br><span class="line">                        return;</span><br><span class="line">                    &#125;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h5 id="HTML新特性"><a href="#HTML新特性" class="headerlink" title="HTML新特性"></a>HTML新特性</h5><p>新特性：</p>
+<pre><code>  1. 拖拽释放(Drag and drop) API
+2. 语义化更好的内容标签（header,nav,footer,aside,article,section）
+3. 音频、视频 API(audio,video)
+4. 画布(Canvas) API
+5. 地理(Geolocation) API
+6. 本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；
+7. sessionStorage 的数据在浏览器关闭后自动删除
+8. 表单控件，calendar、date、time、email、url、search
+9. 新的技术 webworker, websocket, Geolocation
+</code></pre><p>移除的元素：</p>
+<ol>
+<li>纯表现的元素：basefont，big，center，font, s，strike，tt，u；<ol start="2">
+<li>对可用性产生负面影响的元素：frame，frameset，noframes</li>
+</ol>
+</li>
+</ol>
+<h5 id="SEO需要考虑什么"><a href="#SEO需要考虑什么" class="headerlink" title="SEO需要考虑什么"></a>SEO需要考虑什么</h5><p>(1)网站结构布局优化：提倡扁平化结构。</p>
+<ol>
+<li>控制首页链接数量</li>
+<li>扁平化的目录层次  尽量让“蜘蛛”只要跳转3次，就能到达网站内的任何一个内页。</li>
+<li>导航优化  导航应该尽量采用文字方式，也可以搭配图片导航，<br>但是图片代码一定要进行优化，img标签必须添加“alt”和“title”属性</li>
+<li>网站的结构布局<br>页面头部：logo及主导航，以及用户的信息。<br>页面主体：左边正文，包括面包屑导航及正文；右边放热门文章及相关文章<br>页面底部：版权信息和友情链接。<br>特别注意：分页导航写法，推荐写法：“首页 1 2 3 4 5 6 7 8 9 下拉框”，这样“蜘蛛”能够根据相应页码直接跳转，下拉框直接选择页面跳转。而下面的写法是不推荐的，“首页 下一页 尾页”，特别是当分页数量特别多时，“蜘蛛”需要经过很多次往下爬，才能抓取，会很累、会容易放弃。</li>
+<li>控制页面的大小  减少http请求，提高网站的加载速度。</li>
+</ol>
+<p>(2)网页代码优化</p>
+<ol>
+<li>title标题：只强调重点即可，尽量把重要的关键词放在前面</li>
+<li>meta keywords标签：关键词，列举出几个页面的重要关键字即可</li>
+<li>meta description标签：网页描述，需要高度概括网页内容，切记不能太长，过分堆砌关键词，每个页面也要有所不同。</li>
+<li>body中的标签：尽量让代码语义化，</li>
+<li>a标签：页内链接，要加 “title” 属性加以说明。外部链接，链接到其他网站的，则需要加上 el=”nofollow” 属性, 告诉 “蜘蛛” 不要爬，因为一旦“蜘蛛”爬了外部链接之后，就不会再回来了。</li>
+<li>正文标题要用h1标签：“蜘蛛” 认为它最重要，而其它地方不应该随便乱用 h 标题标签。</li>
+<li>img应使用 “alt” 属性加以说明</li>
+<li>strong、em标签 : 需要强调时使用。strong标签在搜索引擎中能够得到高度的重视，它能突出关键词，表现重要的内容，em标签强调效果仅次于strong标签。</li>
+<li>重要内容不要用JS输出</li>
+<li>尽量少使用iframe框架和display：none</li>
+<li>如何不让搜索引擎抓取网站的隐私内容<br> Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol）， 网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。</li>
+</ol>
+<h5 id="HTML兼容问题"><a href="#HTML兼容问题" class="headerlink" title="HTML兼容问题"></a>HTML兼容问题</h5><ol>
+<li>双边距 BUG float 引起的 使用 display</li>
+<li>3 像素问题 使用 float 引起的 使用 dislpay:inline -3px</li>
+<li>超链接 hover 点击后失效 使用正确的书写顺序 link visited hover active</li>
+<li>z-index 问题 给父级添加 position:relative</li>
+<li>Png 透明 使用 js 代码 改</li>
+<li>Min-height 最小高度 ！Important 解决</li>
+<li><p>select 在 ie6 下遮盖 使用 iframe 嵌套</p>
+<ol start="8">
+<li><p>为 什 么 没 有 办 法 定 义 1px 左 右 的 宽 度 容 器 （ IE6 默 认 的 行 高 造 成 的 ， 使 用<br>over:hidden,zoom:0.08 line-height:1px）</p>
+</li>
+<li><p>IE5-8 不支持 opacity，解决办法：</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.opacity &#123;</span><br><span class="line">	opacity: 0.4</span><br><span class="line">	filter: alpha(opacity=60); /* for IE5-7 */</span><br><span class="line">	-ms-filter: &quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=60)&quot;; </span><br><span class="line">	/* for IE8*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>IE6 不支持 PNG 透明背景，解决办法: IE6 下使用 gif 图片</p>
+</li>
+</ol>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h4 id="知识点问题"><a href="#知识点问题" class="headerlink" title="知识点问题"></a>知识点问题</h4><h5 id="CSS-都有哪些选择器？"><a href="#CSS-都有哪些选择器？" class="headerlink" title="CSS 都有哪些选择器？"></a>CSS 都有哪些选择器？</h5><ol>
+<li>id 选择器（ # myid）</li>
+<li>类选择器（.myclassname）</li>
+<li>标签选择器（div, h1, p）</li>
+<li>相邻选择器（h1 + p）</li>
+<li>子选择器（ul &lt; li）</li>
+<li>后代选择器（li a）</li>
+<li>通配符选择器（ * ）</li>
+<li>属性选择器（a[rel = “external”]）</li>
+<li><p>伪类选择器（a: hover, li: nth - child）</p>
+<ul>
+<li>可继承： font-size font-family color, UL LI DL DD DT;</li>
+<li>不可继承 ：border padding margin width height ;</li>
+<li>优先级就近原则，样式定义最近者为准;</li>
+<li>载入样式以最后载入的定位为准;<br>优先级为:<br> !important &gt; id &gt; class &gt; tag<br> important 比 内联优先级高<br> 优先级就近原则，样式定义最近者为准;<br> 以最后载入的样式为准;</li>
+</ul>
+</li>
+</ol>
+<p>CSS3 新增伪类举例：</p>
+<ul>
+<li>p:first-of-type 选择属于其父元素的首个 <p> 元素的每个 </p><p> 元素。</p></li>
+<li>p:last-of-type 选择属于其父元素的最后 <p> 元素的每个 </p><p> 元素。</p></li>
+<li>p:only-of-type 选择属于其父元素唯一的 <p> 元素的每个 </p><p> 元素。</p></li>
+<li>p:only-child 选择属于其父元素的唯一子元素的每个 <p> 元素。</p></li>
+<li>p:nth-child(2) 选择属于其父元素的第二个子元素的每个 <p> 元素。</p></li>
+<li>:enabled、:disabled 控制表单控件的禁用状态。</li>
+<li>:checked，单选框或复选框被选中</li>
+</ul>
+<h5 id="link-和-import-的区别"><a href="#link-和-import-的区别" class="headerlink" title="link  和 import 的区别"></a>link  和 import 的区别</h5><ul>
+<li><p>link属于html标签，而@import是css提供的</p>
+<ul>
+<li>页面被加载时，link会同时被加载，而@import引用的css会等到页面加载结束后加载。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>link是html标签，因此没有兼容性，而@import只有IE5以上才能识别。</li>
+<li>link方式样式的权重高于@import的。</li>
+</ul>
+<h5 id="transition-和animation的区别"><a href="#transition-和animation的区别" class="headerlink" title="transition 和animation的区别"></a>transition 和animation的区别</h5><p>Animation和transition大部分属性是相同的，他们都是随时间改变元素的属性值，他们的主要区别是transition需要触发一个事件才能改变属性，而animation不需要触发任何事件的情况下才会随时间改变属性值，并且transition为2帧，从from …. to，而animation可以一帧一帧的。</p>
+<h5 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h5><p>简单的分为容器属性和元素属性 </p>
+<p>容器的属性：</p>
+<ul>
+<li>flex-direction：决定主轴的方向（即子item的排列方法） .box { flex-direction: row | row-reverse | column | column-reverse; }<ul>
+<li>flex-wrap：决定换行规则 .box{ flex-wrap: nowrap | wrap | wrap-reverse; }</li>
+<li>flex-flow： .box { flex-flow: || ; }</li>
+<li>justify-content：对其方式，水平主轴对齐方式</li>
+<li>align-items：对齐方式，竖直轴线方向</li>
+</ul>
+</li>
+</ul>
+<p>项目的属性（元素的属性）：</p>
+<ul>
+<li>order属性：定义项目的排列顺序，顺序越小，排列越靠前，默认为0</li>
+<li>flex-grow属性：定义项目的放大比例，即使存在空间，也不会放大</li>
+<li>flex-shrink属性：定义了项目的缩小比例，当空间不足的情况下会等比例的缩小，如果定义个item的flow-shrink为0，则为不缩小</li>
+<li>flex-basis属性：定义了在分配多余的空间，项目占据的空间。</li>
+<li>flex：是flex-grow和flex-shrink、flex-basis的简写，默认值为0 1 auto。</li>
+<li>align-self：允许单个项目与其他项目不一样的对齐方式，可以覆盖align-items，默认属性为auto，表示继承父元素的align-items</li>
+</ul>
+<h5 id="BFC（块级格式化上下文，清除浮动，防止margin层叠）"><a href="#BFC（块级格式化上下文，清除浮动，防止margin层叠）" class="headerlink" title="BFC（块级格式化上下文，清除浮动，防止margin层叠）"></a>BFC（块级格式化上下文，清除浮动，防止margin层叠）</h5><p>块级格式化上下文，是一个独立的渲染区域，并且有一定的布局规则。</p>
+<ul>
+<li>BFC区域不会与float box重叠<ul>
+<li>BFC是页面上的一个独立容器，子元素不会影响到外面</li>
+<li>计算BFC的高度时，浮动元素也会参与计算</li>
+</ul>
+</li>
+</ul>
+<p>那些元素会生成BFC：</p>
+<ul>
+<li>根元素<ul>
+<li>float不为none的元素</li>
+<li>position为fixed和absolute的元素</li>
+<li>display为inline-block、table-cell、table-caption，flex，inline-flex的元素</li>
+<li>overflow不为visible的元素</li>
+</ul>
+</li>
+</ul>
+<h5 id="双边距重叠问题"><a href="#双边距重叠问题" class="headerlink" title="双边距重叠问题"></a>双边距重叠问题</h5><p>多个相邻（兄弟或者父子关系）普通流的块元素垂直方向marigin会重叠<br>两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。<br>两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。<br>两个外边距一正一负时，折叠结果是两者的相加的和。</p>
+<h4 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h4><h5 id="画一个-0-5px的线"><a href="#画一个-0-5px的线" class="headerlink" title="画一个 0.5px的线"></a>画一个 0.5px的线</h5><ul>
+<li>采用meta viewport的方式</li>
+<li>采用 border-image的方式</li>
+<li>采用transform: scale()的方式</li>
+</ul>
+<h5 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h5><p>1）margin：0 auto；</p>
+<p>2）top：50% ；left：50%；margin-top：-0.5*height；</p>
+<p>3）设置父元素display： table-cell；子元素  vertical-align:middle；</p>
+<p>4）父元素display：flex； align-items:center;justify-content:center;</p>
+<h5 id="visibility-hidden-opacity-0，display-none"><a href="#visibility-hidden-opacity-0，display-none" class="headerlink" title="visibility=hidden, opacity=0，display:none"></a>visibility=hidden, opacity=0，display:none</h5><p>opacity=0，该元素隐藏起来了，但不会改变页面布局，<br>​                    并且，如果该元素已经绑定一些事件，如click事件，那么点击该区域，也能触发点击事件的<br>visibility=hidden，该元素隐藏起来了，但不会改变页面布局，<br>​                    但是不会触发该元素已经绑定的事件<br>display=none，把元素隐藏起来，并且会改变页面布局，可以理解成在页面中把该元素删除掉一样。</p>
+<h4 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h4><h5 id="sass、less"><a href="#sass、less" class="headerlink" title="sass、less"></a>sass、less</h5><p>​    他们是 CSS 预处理器。他是 CSS 上的一种抽象层。他们是一种特殊的语法/语言编译成 CSS。<br>​        例如 Less 是一种动态样式语言. 将 CSS 赋予了动态语言的特性，如变量，继承，运算， 函<br>​        数. LESS 既可以在客户端上运行 (支持 IE 6+, Webkit, Firefox)，也可一在服务端运行<br>​        (借助 Node.js)。<br>​    变量符不一样，less 是@，而 Sass 是$;<br>​    Sass 支持条件语句，可以使用 if{}else{},for{}循环等等。而 Less 不支持;<br>​    Sass 是基于 Ruby 的，是在服务端处理的，而 Less 是需要引入 less.js 来处理 Less 代码输出 Css 到浏览器<br>​    为什么要使用它们？<br>​        结构清晰，便于扩展。<br>​        可以方便地屏蔽浏览器私有语法差异。这个不用多说，封装对浏览器语法差异的重复处理，<br>​        减少无意义的机械劳动。<br>​        可以轻松实现多重继承。<br>​        完全兼容 CSS 代码，可以方便地应用到老项目中。LESS 只是在 CSS 语法上做了扩展，所<br>​        以老的 CSS 代码也可以与 LESS 代码一同编译。</p>
+<h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><h4 id="优化技术"><a href="#优化技术" class="headerlink" title="优化技术"></a>优化技术</h4><h5 id="图片预加载"><a href="#图片预加载" class="headerlink" title="图片预加载"></a>图片预加载</h5><blockquote>
+<p>两种技术的本质：两者的行为是相反的，一个是提前加载，一个是迟缓甚至不加载。 懒加载对服务器前端有一定的缓解压力作用，预加载则会增加服务器前端压力。</p>
+</blockquote>
+<p>图片等静态资源在使用之前的提前请求；当用户需要查看时可直接从本地缓存中渲染。</p>
+<ul>
+<li><p>用<code>CSS(background)、JS(Image)、HTML(&lt;img /&gt;，display none)</code>都可以。</p>
+<ul>
+<li>常用的是<code>new Image()</code>，设置其src来实现预载，再使用onload方法回调预载完成事件。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>只要浏览器把图片下载到本地，同样的src就会使用缓存，这是最基本也是最实用的预载方法。</li>
+<li>当Image下载完图片头后，会得到宽和高，因此可以在预载前得到图片的大小(方法是用记时器轮循宽高变化)。</li>
+</ul>
+<ul>
+<li><p>使用XMLHttpRequest对象可以更加精细的控制预加载过程，缺点是无法跨域：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var xmlhttprequest = new XMLHttpRequest();</span><br><span class="line">xmlhttprequest.open(&quot;GET&quot;,src,true);</span><br><span class="line">function loadImage(url,callback) &#123;</span><br><span class="line">    var img = new Image();</span><br><span class="line">    img.src = url;    </span><br><span class="line">    if(img.complete) &#123; // 如果图片已经存在于浏览器缓存，直接调用回调函数</span><br><span class="line">        callback.call(img);</span><br><span class="line">        return; // 直接返回，不用再处理onload事件</span><br><span class="line">    &#125;</span><br><span class="line">    img.onload = function()&#123;</span><br><span class="line">        img.onload = null;</span><br><span class="line">        callback.call(img);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h5><p>懒加载的主要目的是作为服务器前端的优化，减少请求数或延迟请求数。</p>
+<ul>
+<li>第一种是纯粹的延迟加载，使用<code>setTimeOut、setInterval</code>进行加载延迟.</li>
+<li>第二种是条件加载，符合某些条件，或触发了某些事件才开始异步下载。</li>
+<li>第三种是可视区加载，即仅加载用户可以看到的区域，这个主要由监控滚动条来实现，一般会在距用户看到某图片前一定距离遍开始加载，这样能保证用户拉下时正好能看到图片。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;&quot; class=&quot;image-item&quot; lazyload=&quot;true&quot; data-original=&quot;http://pic26.nipic.com/20121213/6168183_004444903000_2.jpg&quot; /&gt;</span><br><span class="line"></span><br><span class="line">var viewHeight = document.documentElement.clientHeight // 可视区域的高度</span><br><span class="line">function lazyload () &#123;</span><br><span class="line">  // 获取所有要进行懒加载的图片</span><br><span class="line">  var eles = document.querySelectorAll(&apos;img[data-original][lazyload]&apos;)</span><br><span class="line">  Array.prototype.forEach.call(eles, function (item, index) &#123;</span><br><span class="line">    var rect</span><br><span class="line">    if (item.dataset.original === &apos;&apos;)</span><br><span class="line">      return</span><br><span class="line">    rect = item.getBoundingClientRect()</span><br><span class="line">    // 图片一进入可视区，动态加载</span><br><span class="line">    if (rect.bottom &gt;= 0 &amp;&amp; rect.top &lt; viewHeight) &#123;</span><br><span class="line">      !function () &#123;</span><br><span class="line">        var img = new Image()</span><br><span class="line">        img.src = item.dataset.original</span><br><span class="line">        img.onload = function () &#123;</span><br><span class="line">          item.src = img.src</span><br><span class="line">        &#125;</span><br><span class="line">        item.removeAttribute(&apos;data-original&apos;)</span><br><span class="line">        item.removeAttribute(&apos;lazyload&apos;)</span><br><span class="line">      &#125;()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line">// 首屏要人为的调用，否则刚进入页面不显示图片</span><br><span class="line">lazyload()</span><br><span class="line"></span><br><span class="line">document.addEventListener(&apos;scroll&apos;, lazyload)</span><br></pre></td></tr></table></figure>
+<h4 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h4><h5 id="http和https的基本概念"><a href="#http和https的基本概念" class="headerlink" title="http和https的基本概念"></a>http和https的基本概念</h5><p>​        http: 超文本传输协议，是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从                            WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少。<br>​        https: 是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内                    容就需要SSL。<br>​        https协议的主要作用是：建立一个信息安全通道，来确保数组的传输，确保网站的真实性。</p>
+<h5 id="http和https的区别？"><a href="#http和https的区别？" class="headerlink" title="http和https的区别？"></a>http和https的区别？</h5><p>http传输的数据都是未加密的，也就是明文的<br>https协议是由http和ssl协议构建的可进行加密传输和身份认证的网络协议，比http协议的安全性更高。 主要的区别如下：</p>
+<pre><code>        * Https协议需要ca证书，费用较高。
+        * http是超文本传输协议，信息是明文传输，https则是具有安全性的ssl加密传输协议。
+        * 使用不同的链接方式，端口也不同，一般而言，http协议的端口为80，https的端口为443
+        * http的连接很简单，是无状态的；
+             L+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。
+             (3)https协议的工作原理
+             ​    客户端在使用HTTPS方式与Web服务器通信时有以下几个步骤，如图所示。
+* 客户使用https url访问服务器，则要求web 服务器建立ssl链接。
+* web服务器接收到客户端的请求之后，会将网站的证书（证书中包含了公钥），返回或者说传输给客户端。
+* 客户端和web服务器端开始协商SSL链接的安全等级，也就是加密等级。
+* 客户端浏览器通过双方协商一致的安全等级，建立会话密钥，然后通过网站的公钥来加密会话密钥，并传送给网站。
+* web服务器通过自己的私钥解密出会话密钥。
+* web服务器通过会话密钥加密与客户端之间的通信。
+</code></pre><h5 id="https协议的优点"><a href="#https协议的优点" class="headerlink" title="https协议的优点"></a>https协议的优点</h5><pre><code>* 使用HTTPS协议可认证用户和服务器，确保数据发送到正确的客户机和服务器；
+* HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，
+    要比http协议安全，可防止数据在传输过程中不被窃取、改变，确保数据的完整性。
+* HTTPS是现行架构下最安全的解决方案，虽然不是绝对安全，但它大幅增加了中间人攻击的成本。
+* 谷歌曾在2014年8月份调整搜索引擎算法，并称“比起同等HTTP网站，采用HTTPS加密的网站在搜索结果中的排名将会更高”。
+</code></pre><h5 id="https协议的缺点"><a href="#https协议的缺点" class="headerlink" title="https协议的缺点"></a>https协议的缺点</h5><pre><code>* https握手阶段比较费时，会使页面加载时间延长50%，增加10%~20%的耗电。
+* https缓存不如http高效，会增加数据开销。
+* SSL证书也需要钱，功能越强大的证书费用越高。
+* SSL证书需要绑定IP，不能再同一个ip上绑定多个域名，ipv4资源支持不了这种消耗。
+</code></pre><h5 id="TCP三次握手"><a href="#TCP三次握手" class="headerlink" title="TCP三次握手"></a>TCP三次握手</h5><p>C发起请求连接S确认，s也发起连接C确认。<br>每次握手的作用：<br>​        第一次握手：S只可以确认 自己可以接受C发送的报文段<br>​        第二次握手：C可以确认 S收到了自己发送的报文段，并且可以确认 自己可以接受S发送的报文段<br>​        第三次握手：S可以确认 C收到了自己发送的报文段</p>
+<h5 id="TCP和UDP区别"><a href="#TCP和UDP区别" class="headerlink" title="TCP和UDP区别"></a>TCP和UDP区别</h5><p>（1）TCP是面向连接的，udp是无连接的即发送数据前不需要先建立链接。<br>（2）TCP提供可靠的服务。也就是说，通过TCP连接传送的数据，无差错，不丢失，不重复，且按序到达;<br>​        UDP尽最大努力交付，即不保证可靠交付。 并且因为tcp可靠，面向连接，不会丢失数据因此适合大数据量的交换。<br>（3）TCP是面向字节流，UDP面向报文，并且网络出现拥塞不会使得发送速率降低<br>​        （因此会出现丢包，对实时的应用比如IP电话和视频会议等）。<br>（4）TCP只能是1对1的，UDP支持1对1,1对多。<br>（5）TCP的首部较大为20字节，而UDP只有8字节。<br>（6）TCP是面向连接的可靠性传输，而UDP是不可靠的。</p>
+<h5 id="一个图片url访问后直接下载怎样实现？"><a href="#一个图片url访问后直接下载怎样实现？" class="headerlink" title="一个图片url访问后直接下载怎样实现？"></a>一个图片url访问后直接下载怎样实现？</h5><p>请求的返回头里面，用于浏览器解析的重要参数就是OSS的API文档里面的返回http头，决定用户下载行为的参数。<br>下载的情况下：</p>
+<ol>
+<li>x-oss-object-type:   Normal</li>
+<li>x-oss-request-id:   598D5ED34F29D01FE2925F41</li>
+<li>x-oss-storage-class:   Standard</li>
+</ol>
+<h5 id="http-2-0"><a href="#http-2-0" class="headerlink" title="http 2.0"></a>http 2.0</h5><p>http2.0是基于1999年发布的http1.0之后的首次更新。</p>
+<ul>
+<li>提升访问速度（可以对于，请求资源所需时间更少，访问速度更快，相比http1.0）</li>
+<li>允许多路复用：多路复用允许同时通过单一的HTTP/2连接发送多重请求-响应信息。改善了：在http1.1中，浏览器客户端在同一时间，针对同一域名下的请求有一定数量限制（连接数量），超过限制会被阻塞。</li>
+<li>二进制分帧：HTTP2.0会将所有的传输信息分割为更小的信息或者帧，并对他们进行二进制编码</li>
+<li>首部压缩</li>
+<li>服务器端推送</li>
+</ul>
+<h5 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h5><p>100-199 用于指定客户端应相应的某些动作。<br>200-299 用于表示请求成功<br>300-399 用于已经移动的文件并且常被包含在定位头信息中指定新的地址信息。<br>400-499 用于指出客户端的错误。<br>200：请求已成功，请求所希望的响应头或数据体将随此响应返回。<br>301 - 资源（网页等）被永久转移到其它 URL<br>302：由于这样的重定向是临时的。只有在Cache-Control或Expires中进行了指定的情况下，这个响应才是可缓存的<br>304：如果客户端发送了一个带条件的 GET 请求且该请求已被允许，而文档的内容（自上 次访问以来或者根据请求的条件）并没有改变，则服务器应当返回这个状态码。<br>304 响应禁止包含消息体，因此始终以消息头后的第一个空行结尾。<br>400 语义有误，当前请求无法被服务器理解。<br>403：服务器已经理解请求，但是拒绝执行它。<br>404 - 请求的资源（网页等）不存在。<br>500 - 内部服务器错误<br>503 - 服务器当前不能处理客户端的请求，一段时间后可能恢复正常</p>
+<p>1）400 请求无效<br>​    产生原因：</p>
+<pre><code>* 前端提交数据的字段名称和字段类型与后台的实体没有保持一致
+* 前端提交到后台的数据应该是json字符串类型，但是前端没有将对象JSON.stringify转化成字符串。
+* 对照字段的名称，保持一致性
+* 将obj对象通过JSON.stringify实现序列化
+</code></pre><p>  2）401  当前请求需要用户验证<br>  3）403 服务器得到请求，但是拒绝执行</p>
+<h5 id="fecth-发送两次请求的原因"><a href="#fecth-发送两次请求的原因" class="headerlink" title="fecth 发送两次请求的原因"></a>fecth 发送两次请求的原因</h5><p>​        fetch发送post请求的时候，总是发送2次，第一次状态码是204，第二次才成功？<br>​            原因很简单，因为你用fetch的post请求的时候，导致fetch 第一次发送了一个Options请求，<br>​            询问服务器是否支持修改的请求头，如果服务器支持，则在第二次中发送真正的请求。</p>
+<h4 id="WebScoket"><a href="#WebScoket" class="headerlink" title="WebScoket"></a>WebScoket</h4><h5 id="什么是WebSocket"><a href="#什么是WebSocket" class="headerlink" title="什么是WebSocket?"></a>什么是WebSocket?</h5><p>​        WebSocket是HTML5中的协议，支持持久连续，http协议不支持持久性连接。<br>​        Http1.0和HTTP1.1都不支持持久性的链接，HTTP1.1中的keep-alive，将多个http请求合并为1个</p>
+<h5 id="WebSocket是什么样的协议，具体有什么优点？"><a href="#WebSocket是什么样的协议，具体有什么优点？" class="headerlink" title="WebSocket是什么样的协议，具体有什么优点？"></a>WebSocket是什么样的协议，具体有什么优点？</h5><pre><code>* HTTP的生命周期通过Request来界定，也就是Request一个Response，那么在Http1.0协议中，这次Http请求就结束了。
+    在Http1.1中进行了改进，是的有一个connection：Keep-alive，也就是说，在一个Http连接中，可以发送多个Request，接收多个                Response。但是必须记住，在Http中一个Request只能对应有一个Response，而且这个Response是被动的，不能主动发起。
+* WebSocket是基于Http协议的，或者说借用了Http协议来完成一部分握手，在握手阶段与Http是相同的。
+    我们来看一个websocket握手协议的实现，基本是2个属性，upgrade，connection。
+</code></pre><p>基本请求如下：<br>GET /chat HTTP/1.1<br>Host: server.example.com<br>Upgrade: websocket                                // 告诉服务器发送的是websocket<br>Connection: Upgrade<br>Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==<br>Sec-WebSocket-Protocol: chat, superchat<br>Sec-WebSocket-Version: 13<br>Origin: <a href="http://example.com" target="_blank" rel="noopener">http://example.com</a></p>
+<h4 id="Cookie、sessionStorage、localStorage"><a href="#Cookie、sessionStorage、localStorage" class="headerlink" title="Cookie、sessionStorage、localStorage"></a>Cookie、sessionStorage、localStorage</h4><h5 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h5><ul>
+<li><p>cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递。sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下,存储的大小很小只有4K左右。 （key：可以在浏览器和服务器端来回传递，存储容量小，只有大约4K左右）</p>
+</li>
+<li><p>sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持，</p>
+</li>
+<li>localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；</li>
+<li><p>cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。（key：本身就是一个回话过程，关闭浏览器后消失，session为一个回话，当页面不同即使是同一页面打开两次，也被视为同一次回话）</p>
+</li>
+<li><p>localStorage：localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。（key：同源窗口都会共享，并且不会失效，不管窗口或者浏览器关闭与否都会始终生效）</p>
+</li>
+</ul>
+<h5 id="Cookie如何防治XSS攻击"><a href="#Cookie如何防治XSS攻击" class="headerlink" title="Cookie如何防治XSS攻击"></a>Cookie如何防治XSS攻击</h5><p>XSS（跨站脚本攻击）是指攻击者在返回的HTML中嵌入javascript脚本，</p>
+<ul>
+<li><p>在HTTP头部配上<code>set-cookie：httponly</code>这个属性可以防止XSS,它会禁止javascript脚本来访问cookie。</p>
+<ul>
+<li><code>secure</code> 属性告诉浏览器仅在请求为https的时候发送cookie。</li>
+</ul>
+</li>
+</ul>
+<h5 id="cookie-和session-的区别"><a href="#cookie-和session-的区别" class="headerlink" title="cookie 和session 的区别"></a>cookie 和session 的区别</h5><p>​    1、cookie数据存放在客户的浏览器上，session数据放在服务器上。<br>​    2、cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗<br>​           考虑到安全应当使用session。<br>​    3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能<br>​           考虑到减轻服务器性能方面，应当使用COOKIE。<br>​    4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</p>
+<h5 id="一句话概括RESTful"><a href="#一句话概括RESTful" class="headerlink" title="一句话概括RESTful"></a>一句话概括RESTful</h5><p>  就是用URL定位资源，用HTTP描述操作（get、delete、put、post）</p>
+<h5 id="内存泄露-amp-amp-垃圾回收"><a href="#内存泄露-amp-amp-垃圾回收" class="headerlink" title="内存泄露  &amp;&amp;  垃圾回收"></a>内存泄露  &amp;&amp;  垃圾回收</h5><p>内存泄漏指任何对象在您不再拥有或需要它之后仍然存在。<br>垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用<br>数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的（果两个对象互相引用），那么该对象的内存即可回收。</p>
+<pre><code>  1. setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏。
+2. 闭包
+3. 控制台日志
+4. 循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）
+</code></pre><h2 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h2><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a><a href="https://blog.csdn.net/zhuangxingrui86/article/details/7955130" target="_blank" rel="noopener">排序算法</a></h3><blockquote>
+<p>排序算法的稳定性,通俗地讲就是能保证排序前2个相等的数其在序列的前后位置顺序和排序后它们两个的前后位置顺序相同。<br>在简单形式化一下，如果Ai = Aj，Ai原来在位置前，排序后Ai还是要在Aj位置前。</p>
+</blockquote>
+<h4 id="稳定排序："><a href="#稳定排序：" class="headerlink" title="稳定排序："></a>稳定排序：</h4><p>基数排序、冒泡排序、直接插入排序、折半插入排序、归并排序是稳定的排序算法。</p>
+<h5 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h5><h5 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h5><ul>
+<li>将第一个数和第二个数进行比较，如果是逆序的，就将两个数交换，</li>
+<li>比较第二个数和第三个数，依次类推，直到第n-1个数和第n个数据进行比较完为止，</li>
+<li>进行延续二趟排序，对前n-1个数进行同类操作，直到没有数可比；</li>
+</ul>
+<h5 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h5><ul>
+<li>每次从无序表中抽出一个数插入到有序表中，使得表仍然有序，</li>
+<li>第一趟比较前两个数,然后把第二个数按大小插入到有序表中; </li>
+<li>第二趟把第三个数据与前两个数从后向前扫描，把第三个数按大小插入到有序表中；</li>
+<li>依次进行下去，进行了(n-1)趟扫描以后就完成了整个排序        </li>
+</ul>
+<h5 id="折半插入排序"><a href="#折半插入排序" class="headerlink" title="折半插入排序"></a>折半插入排序</h5><h5 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h5><h4 id="不稳定排序："><a href="#不稳定排序：" class="headerlink" title="不稳定排序："></a>不稳定排序：</h4><p>快速排序、希尔排序、堆排序、直接选择排序不是稳定的排序算法。</p>
+<h5 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h5><p>n个项目要Ο(n log n)次比较。在最坏状况下则需要Ο(n2)次</p>
+<ul>
+<li><p>首先任意选取一个数据（通常选用第一个数据）作为关键数据，</p>
+</li>
+<li><p>然后将所有比它小的数都放到它前面，所有比它大的数都放到它后面，这个过程称为一趟快速排序。</p>
+</li>
+<li><p>然后再按此方法对这两部分数据分别进行快速排序，</p>
+</li>
+<li><p>整个排序过程可以递归进行，以此达到整个数据变成有序序列；</p>
+<p>1）设置两个变量I、J，排序开始的时候：I=0，J=N-1；</p>
+<p>2）以第一个数组元素作为关键数据，赋值给key，即 key=A[0]；<br>3）从J开始向前搜索，即由后开始向前搜索（J=J-1），找到第一个小于key的值A[J]，并与A[I]交换；<br>4）从I开始向后搜索，即由前开始向后搜索（I=I+1），找到第一个大于key的A[I]，与A[J]交换；<br>5）重复第3、4、5步，直到 I=J； (3,4步是在程序中没找到时候j=j-1，i=i+1，直至找到为止。找到并交换的时候i， j指针位置不变。另外当i=j这过程一定正好是i+或j-完成的最后另循环结束)</p>
+</li>
+</ul>
+<h5 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h5><ul>
+<li>先将整个待排序的记录序列多次分割成若干子序列分别进行直接插入排序，</li>
+<li>待整个序列中的记录“基本有序”时，再对全体记录进行一次直接插入排序；            </li>
+</ul>
+<h5 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h5><h5 id="直接选择排序"><a href="#直接选择排序" class="headerlink" title="直接选择排序"></a>直接选择排序</h5><ul>
+<li>首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，</li>
+<li>然后，再从剩余未排序元素中继续寻找最小（大）元素， </li>
+<li>然后放到已排序序列的末尾。</li>
+<li>以此类推，直到所有元素均排序完毕。<br>​<br>​    </li>
+</ul>
+<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><h3 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h3><h5 id="对于MVVM的理解？"><a href="#对于MVVM的理解？" class="headerlink" title="对于MVVM的理解？"></a>对于MVVM的理解？</h5><p>MVVM 是 Model-View-ViewModel 的缩写。<br><strong>Model</strong>代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑。<br><strong>View</strong> 代表UI 组件，它负责将数据模型转化成UI 展现出来。<br><strong>ViewModel</strong> 监听模型数据的改变和控制视图行为、处理用户交互，简单理解就是一个同步View 和 Model的对象，连接Model和View。<br>在MVVM架构下，View 和 Model 之间并没有直接的联系，而是通过ViewModel进行交互，Model 和 ViewModel 之间的交互是双向的， 因此View 数据的变化会同步到Model中，而Model 数据的变化也会立即反应到View 上。<br><strong>ViewModel</strong> 通过双向数据绑定把 View 层和 Model 层连接了起来，而View 和 Model 之间的同步工作完全是自动的，无需人为干涉，因此开发者只需关注业务逻辑，不需要手动操作DOM, 不需要关注数据状态的同步问题，复杂的数据状态维护完全由 MVVM 来统一管理。</p>
+<h5 id="Vue与Angular以及React的区别？"><a href="#Vue与Angular以及React的区别？" class="headerlink" title="Vue与Angular以及React的区别？"></a>Vue与Angular以及React的区别？</h5><p><strong>1.与AngularJS的区别</strong><br>相同点：<br>都支持指令：内置指令和自定义指令；都支持过滤器：内置过滤器和自定义过滤器；都支持双向数据绑定；都不支持低端浏览器。</p>
+<p>不同点：<br>AngularJS的学习成本高，比如增加了Dependency Injection特性，而Vue.js本身提供的API都比较简单、直观；在性能上，AngularJS依赖对数据做脏检查，所以Watcher越多越慢；Vue.js使用基于依赖追踪的观察并且使用异步队列更新，所有的数据都是独立触发的。</p>
+<p><strong>2.与React的区别</strong><br>相同点：<br>React采用特殊的JSX语法，Vue.js在组件开发中也推崇编写.vue特殊文件格式，对文件内容都有一些约定，两者都需要编译后使用；中心思想相同：一切都是组件，组件实例之间可以嵌套；都提供合理的钩子函数，可以让开发者定制化地去处理需求；都不内置列数AJAX，Route等功能到核心包，而是以插件的方式加载；在组件开发中都支持mixins的特性。<br>不同点：<br>React采用的Virtual DOM会对渲染出来的结果做脏检查；Vue.js在模板中提供了指令，过滤器等，可以非常方便，快捷地操作Virtual DOM。</p>
+<h5 id="vue等单页面应用及其优缺点"><a href="#vue等单页面应用及其优缺点" class="headerlink" title="vue等单页面应用及其优缺点"></a><strong>vue等单页面应用及其优缺点</strong></h5><p>优点：</p>
+<ul>
+<li>Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件，</li>
+<li>核心是一个响应的数据绑定系统。MVVM、数据驱动、组件化、轻量、简洁、高效、快速、模块友好。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>不支持低版本的浏览器，最低只支持到IE9；</li>
+<li>不利于SEO的优化（如果要支持SEO，建议通过服务端来进行渲染组件）；</li>
+<li>第一次加载首页耗时相对长一些；不可以使用浏览器的导航按钮需要自行实现前进、后退。</li>
+</ul>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h4><h5 id="Vue的生命周期"><a href="#Vue的生命周期" class="headerlink" title="Vue的生命周期"></a>Vue的生命周期</h5><p> Vue 实例从创建到销毁的过程，就是生命周期。从开始创建、初始化数据、编译模板、挂载Dom→渲染、更新→渲染、销毁等一系列过程，称之为 Vue 的生命周期。</p>
+<ul>
+<li><strong>beforeCreate</strong>（创建前） 在数据观测和初始化事件还未开始</li>
+<li><strong>created</strong>（创建后） 完成数据观测，属性和方法的运算，初始化事件，<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">+ **beforeMount**（载入前） 在挂载开始之前被调用，相关的render函数首次被调用。实例已完成以下的配置：编译模板，把data里面的数据和模板生成html。注意此时还没有挂载html到页面上。</span><br><span class="line">  **mounted**（载入后） 在el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用。实例已完成以下的配置：用上面编译好的html内容替换el属性指向的DOM对象。完成模板中的html渲染到html页面中。此过程中进行ajax交互。</span><br><span class="line">+ **beforeUpdate**（更新前） 在数据更新之前调用，发生在虚拟DOM重新渲染和打补丁之前。可以在该钩子中进一步地更改状态，不会触发附加的重渲染过程。</span><br><span class="line">+ **updated**（更新后） 在由于数据更改导致的虚拟DOM重新渲染和打补丁之后调用。调用时，组件DOM已经更新，所以可以执行依赖于DOM的操作。然而在大多数情况下，应该避免在此期间更改状态，因为这可能会导致更新无限循环。该钩子在服务器端渲染期间不被调用。</span><br><span class="line">+ **beforeDestroy**（销毁前） 在实例销毁之前调用。实例仍然完全可用。</span><br><span class="line">+ **destroyed**（销毁后） 在实例销毁之后调用。调用后，所有的事件监听器会被移除，所有的子实例也会被销毁。该钩子在服务器端渲染期间不被调用。</span><br><span class="line"></span><br><span class="line">##### 第一次页面加载会触发哪几个钩子？</span><br><span class="line"></span><br><span class="line">答：会触发 下面这几个beforeCreate, created, beforeMount, mounted 。</span><br><span class="line"></span><br><span class="line">##### DOM 渲染在 哪个周期中就已经完成？</span><br><span class="line"></span><br><span class="line">DOM 渲染在 mounted 中就已经完成了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#####  Vue实现数据双向绑定的原理：Object.defineProperty（）</span><br><span class="line"></span><br><span class="line">vue实现数据双向绑定主要是：采**用数据劫持结合发布者-订阅者模式**的方式，通过**Object.defineProperty（）**来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应监听回调。当把一个普通 Javascript 对象传给 Vue 实例来作为它的 data 选项时，Vue 将遍历它的属性，用 Object.defineProperty 将它们转为 getter/setter。用户看不到 getter/setter，但是在内部它们让 Vue 追踪依赖，在属性被访问和修改时通知变化。</span><br><span class="line"></span><br><span class="line">vue的数据双向绑定 将MVVM作为数据绑定的入口，整合Observer，Compile和Watcher三者，通过Observer来监听自己的model的数据变化，通过Compile来解析编译模板指令（vue中是用来解析 &#123;&#123;&#125;&#125;），最终利用watcher搭起observer和Compile之间的通信桥梁，达到数据变化 —&gt;视图更新；视图交互变化（input）—&gt;数据model变更双向绑定效果。</span><br><span class="line"></span><br><span class="line">**js实现简单的双向绑定**</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><body><br>    <div id="app"><br>    <input type="text" id="txt"><br>    <p id="show"></p><br></div><br><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"tagMode":false});</script></body></p>
+<p><script type="text/javascript"><br>    var obj = {}<br>    Object.defineProperty(obj, ‘txt’, {<br>        get: function () {<br>            return obj<br>        },<br>        set: function (newValue) {<br>            document.getElementById(‘txt’).value = newValue<br>            document.getElementById(‘show’).innerHTML = newValue<br>        }<br>    })<br>    document.addEventListener(‘keyup’, function (e) {<br>        obj.txt = e.target.value<br>    })<br></script><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 路由</span><br><span class="line"></span><br><span class="line">##### **```$route```和```$router```的区别**</span><br><span class="line"></span><br><span class="line">答：```$route```是“路由信息对象”，包括path，params，hash，query，fullPath，matched，name等路由信息参数。而```$router```是“路由实例”对象包括了路由的跳转方法，钩子函数等。</span><br><span class="line"></span><br><span class="line">##### Vue的路由实现：hash模式 和 history模式</span><br><span class="line"></span><br><span class="line">**hash模式：**在浏览器中符号“#”，#以及#后面的字符称之为hash，用window.location.hash读取；</span><br><span class="line">特点：hash虽然在URL中，但不被包括在HTTP请求中；用来指导浏览器动作，对服务端安全无用，hash不会重加载页面。</span><br><span class="line">hash 模式下，仅 hash 符号之前的内容会被包含在请求中，如 [http://www.xxx.com](http://www.xxx.com/)，因此对于后端来说，即使没有做到对路由的全覆盖，也不会返回 404 错误。</span><br><span class="line"></span><br><span class="line">**history模式：**history采用HTML5的新特性；且提供了两个新方法：pushState（），replaceState（）可以对浏览器历史记录栈进行修改，以及popState事件的监听到状态变更。</span><br><span class="line">history 模式下，前端的 URL 必须和实际向后端发起请求的 URL 一致，如 &lt;http://www.xxx.com/items/id&gt;。后端如果缺少对 /items/id 的路由处理，将返回 404 错误。所以，要在服务端增加一个覆盖所有情况的候选资源：如果 URL 匹配不到任何静态资源，则应该返回同一个 index.html 页面，这个页面就是你 app 依赖的页面。”</span><br><span class="line"></span><br><span class="line">##### vue路由的钩子函数</span><br><span class="line"></span><br><span class="line">三种，一种是全局导航钩子：router.beforeEach(to,from,next)，作用：跳转前进行判断拦截。第二种：组件内的钩子；第三种：单独路由独享组件</span><br><span class="line"></span><br><span class="line">首页可以控制导航跳转，beforeEach，afterEach等，一般用于页面title的修改。一些需要登录才能调整页面的重定向功能。</span><br><span class="line"></span><br><span class="line">**beforeEach**主要有3个参数to，from，next：</span><br><span class="line"></span><br><span class="line">**to**：route即将进入的目标路由对象，</span><br><span class="line"></span><br><span class="line">**from**：route当前导航正要离开的路由</span><br><span class="line"></span><br><span class="line">**next**：function一定要调用该方法resolve这个钩子。执行效果依赖next方法的调用参数。可以控制网页的跳转。</span><br><span class="line"></span><br><span class="line">#### vuex</span><br><span class="line"></span><br><span class="line">##### vuex是什么？怎么使用？哪种功能场景使用它？</span><br><span class="line"></span><br><span class="line">Vuex 使用单一状态树,即每个应用将仅仅包含一个store 实例，但单一状态树和模块化并不冲突。存放的数据状态，不可以直接修改里面的数据。</span><br><span class="line"></span><br><span class="line">只用来读取的状态集中放在store中；</span><br><span class="line"></span><br><span class="line"> 改变状态的方式是提交mutations，这是个同步的事物； </span><br><span class="line"></span><br><span class="line">异步逻辑应该封装在action中。</span><br><span class="line">在main.js引入store，注入。新建了一个目录store，….. export 。</span><br><span class="line">场景有：单页应用中，组件之间的状态、音乐播放、登录状态、加入购物车</span><br><span class="line"></span><br><span class="line">#### 指令</span><br><span class="line"></span><br><span class="line">##### **vue常用的修饰符？**</span><br><span class="line"></span><br><span class="line">.prevent: 提交事件不再重载页面；.stop: 阻止单击事件冒泡；.self: 当事件发生在该元素本身而不是子元素的时候会触发；.capture: 事件侦听，事件发生的时候会调用</span><br><span class="line"></span><br><span class="line">##### **vue中 key 值的作用？**</span><br><span class="line"></span><br><span class="line">当 Vue.js 用 v-for 正在更新已渲染过的元素列表时，它默认用“就地复用”策略。如果数据项的顺序被改变，Vue 将不会移动 DOM 元素来匹配数据项的顺序， 而是简单复用此处每个元素，并且确保它在特定索引下显示已被渲染过的每个元素。key的作用主要是为了高效的更新虚拟DOM。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 内置组件</span><br><span class="line"></span><br><span class="line">##### 对keep-alive 的了解？</span><br><span class="line"></span><br><span class="line">**keep-alive**是 Vue 内置的一个组件，可以使被包含的组件保留状态，或避免重新渲染。</span><br><span class="line">在vue 2.1.0 版本之后，keep-alive新加入了两个属性: include(包含的组件缓存) 与 exclude(排除的组件不缓存，优先级大于include) 。</span><br></pre></td></tr></table></figure></p>
+<p><keep-alive include="include_components" exclude="exclude_components"><br>  <component><br>    <!-- 该组件是否缓存取决于include和exclude属性 --><br>  </component><br></keep-alive><br><code>`</code></p>
+<h3 id="技巧-1"><a href="#技巧-1" class="headerlink" title="技巧"></a>技巧</h3><h5 id="Vue组件间的参数传递"><a href="#Vue组件间的参数传递" class="headerlink" title="Vue组件间的参数传递"></a>Vue组件间的参数传递</h5><p><strong>1.父组件与子组件传值</strong><br>父组件传给子组件：子组件通过props方法接受数据;<br>子组件传给父组件：$emit方法传递参数<br><strong>2.非父子组件间的数据传递，兄弟组件传值</strong><br>eventBus，就是创建一个事件中心，相当于中转站，可以用它来传递事件和接收事件。项目比较小时，用这个比较合适。（虽然也有不少人推荐直接用VUEX，具体来说看需求咯。技术只是手段，目的达到才是王道。）</p>
+
+      
+    </div>
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+          
+            <a href="/tags/面试题/" rel="tag"><i class="fa fa-tag"></i> 面试题</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/17/浏览器渲染机制/" rel="next" title="浏览器渲染机制">
+                <i class="fa fa-chevron-left"></i> 浏览器渲染机制
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/20/设计模式/" rel="prev" title="设计模式">
+                设计模式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/album.jpg" alt="Xiao Qi">
+            
+              <p class="site-author-name" itemprop="name">Xiao Qi</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/qiwang97" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:2396586732@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liaoxuefeng.com/" title="廖雪峰" target="_blank">廖雪峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript"><span class="nav-number">1.</span> <span class="nav-text">JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型"><span class="nav-number">1.0.1.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#原始类型有哪几种？null-是对象吗？原始数据类型和复杂数据类型存储有什么区别？"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">原始类型有哪几种？null 是对象吗？原始数据类型和复杂数据类型存储有什么区别？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#typeof-是否正确判断类型-instanceof-呢？-instanceof-的实现原理是什么？"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">typeof 是否正确判断类型? instanceof 呢？ instanceof 的实现原理是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#和-有什么区别？"><span class="nav-number">1.0.1.3.</span> <span class="nav-text">== 和 === 有什么区别？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#例举-3-种强制类型转换和-2-种隐式类型转换"><span class="nav-number">1.0.1.4.</span> <span class="nav-text">例举 3 种强制类型转换和 2 种隐式类型转换?</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何判断一个变量是不是数组？"><span class="nav-number">1.0.1.5.</span> <span class="nav-text">如何判断一个变量是不是数组？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#类数组和数组的区别是什么？"><span class="nav-number">1.0.1.6.</span> <span class="nav-text">类数组和数组的区别是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数组的哪些-API-会改变原数组？"><span class="nav-number">1.0.1.7.</span> <span class="nav-text">数组的哪些 API 会改变原数组？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#为什么-0-1-0-2-0-3"><span class="nav-number">1.0.1.8.</span> <span class="nav-text">为什么 0.1 + 0.2 != 0.3 ?</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数"><span class="nav-number">1.0.2.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#let、const-以及-var-的区别是什么？"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">let、const 以及 var 的区别是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#变量提升？暂时性死区？"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">变量提升？暂时性死区？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何正确的判断-this-箭头函数的-this-是什么？"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">如何正确的判断 this? 箭头函数的 this 是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JS-执行上下文栈和作用域链的理解。"><span class="nav-number">1.0.2.4.</span> <span class="nav-text">JS 执行上下文栈和作用域链的理解。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是闭包？闭包的作用是什么？闭包有哪些使用场景？"><span class="nav-number">1.0.2.5.</span> <span class="nav-text">什么是闭包？闭包的作用是什么？闭包有哪些使用场景？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#call、apply-有什么区别？call-aplly-和-bind-的内部是如何实现的？"><span class="nav-number">1.0.2.6.</span> <span class="nav-text">call、apply 有什么区别？call,aplly 和 bind 的内部是如何实现的？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#new-的原理是什么？通过-new-的方式创建对象和通过字面量创建有什么区别？"><span class="nav-number">1.0.2.7.</span> <span class="nav-text">new 的原理是什么？通过 new 的方式创建对象和通过字面量创建有什么区别？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#谈谈你对原型的理解？"><span class="nav-number">1.0.2.8.</span> <span class="nav-text">谈谈你对原型的理解？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是原型链？【原型链解决的是什么问题？】"><span class="nav-number">1.0.2.9.</span> <span class="nav-text">什么是原型链？【原型链解决的是什么问题？】</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#prototype-和-proto-区别是什么？"><span class="nav-number">1.0.2.10.</span> <span class="nav-text">prototype 和 __proto__ 区别是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用-ES5-实现一个继承？"><span class="nav-number">1.0.2.11.</span> <span class="nav-text">使用 ES5 实现一个继承？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是深拷贝？深拷贝和浅拷贝有什么区别？"><span class="nav-number">1.0.2.12.</span> <span class="nav-text">什么是深拷贝？深拷贝和浅拷贝有什么区别？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#继承"><span class="nav-number">1.0.2.13.</span> <span class="nav-text">继承</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数方法"><span class="nav-number">1.0.3.</span> <span class="nav-text">函数方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#for-of-for-in-和-forEach-map-的区别"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">for of , for in 和 forEach,map 的区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#防抖和节流的区别是什么？防抖和节流的实现。"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">防抖和节流的区别是什么？防抖和节流的实现。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#setTimeout-倒计时为什么会出现误差？"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">setTimeout 倒计时为什么会出现误差？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是函数柯里化？实现-sum-1-2-3-返回结果是-1-2-3-之和"><span class="nav-number">1.0.3.4.</span> <span class="nav-text">什么是函数柯里化？实现 sum(1)(2)(3) 返回结果是 1,2,3 之和</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事件"><span class="nav-number">1.0.4.</span> <span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是事件流"><span class="nav-number">1.0.4.1.</span> <span class="nav-text">什么是事件流</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何让事件先冒泡后捕获？"><span class="nav-number">1.0.4.2.</span> <span class="nav-text">如何让事件先冒泡后捕获？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#事件委托"><span class="nav-number">1.0.4.3.</span> <span class="nav-text">事件委托</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#mouseover-和-mouseenter的区别"><span class="nav-number">1.0.4.4.</span> <span class="nav-text">mouseover 和 mouseenter的区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#拖拽功能实现"><span class="nav-number">1.0.4.5.</span> <span class="nav-text">拖拽功能实现</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BOM-amp-amp-DOM"><span class="nav-number">1.0.5.</span> <span class="nav-text">BOM &amp;&amp; DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#js的各种位置，比如clientHeight-scrollHeight-offsetHeight-以及scrollTop-offsetTop-clientTop的区别？"><span class="nav-number">1.0.5.1.</span> <span class="nav-text">js的各种位置，比如clientHeight,scrollHeight,offsetHeight ,以及scrollTop, offsetTop,clientTop的区别？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#location对象"><span class="nav-number">1.0.5.2.</span> <span class="nav-text">location对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#history对象"><span class="nav-number">1.0.5.3.</span> <span class="nav-text">history对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#navigator对象"><span class="nav-number">1.0.5.4.</span> <span class="nav-text">navigator对象</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ES-6"><span class="nav-number">1.0.6.</span> <span class="nav-text">ES 6</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ES6-中的-class-和-ES5-的类有什么区别？"><span class="nav-number">1.0.6.1.</span> <span class="nav-text">ES6 中的 class 和 ES5 的类有什么区别？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ES6-新的特性有哪些？"><span class="nav-number">1.0.6.2.</span> <span class="nav-text">ES6 新的特性有哪些？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#promise-有几种状态-Promise-有什么优缺点"><span class="nav-number">1.0.6.3.</span> <span class="nav-text">promise 有几种状态, Promise 有什么优缺点 ?</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Promise-构造函数是同步还是异步执行，then-呢-promise-如何实现-then-处理"><span class="nav-number">1.0.6.4.</span> <span class="nav-text">Promise 构造函数是同步还是异步执行，then 呢 ?promise 如何实现 then 处理 ?</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Promise-和-setTimeout-的区别"><span class="nav-number">1.0.6.5.</span> <span class="nav-text">Promise 和 setTimeout 的区别 ?</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Promise-all"><span class="nav-number">1.0.6.6.</span> <span class="nav-text">Promise.all</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML"><span class="nav-number">2.</span> <span class="nav-text">HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#HTML新特性"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">HTML新特性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SEO需要考虑什么"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">SEO需要考虑什么</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#HTML兼容问题"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">HTML兼容问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS"><span class="nav-number">3.</span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#知识点问题"><span class="nav-number">3.0.1.</span> <span class="nav-text">知识点问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#CSS-都有哪些选择器？"><span class="nav-number">3.0.1.1.</span> <span class="nav-text">CSS 都有哪些选择器？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#link-和-import-的区别"><span class="nav-number">3.0.1.2.</span> <span class="nav-text">link  和 import 的区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#transition-和animation的区别"><span class="nav-number">3.0.1.3.</span> <span class="nav-text">transition 和animation的区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Flex布局"><span class="nav-number">3.0.1.4.</span> <span class="nav-text">Flex布局</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#BFC（块级格式化上下文，清除浮动，防止margin层叠）"><span class="nav-number">3.0.1.5.</span> <span class="nav-text">BFC（块级格式化上下文，清除浮动，防止margin层叠）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#双边距重叠问题"><span class="nav-number">3.0.1.6.</span> <span class="nav-text">双边距重叠问题</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技巧"><span class="nav-number">3.0.2.</span> <span class="nav-text">技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#画一个-0-5px的线"><span class="nav-number">3.0.2.1.</span> <span class="nav-text">画一个 0.5px的线</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#垂直居中"><span class="nav-number">3.0.2.2.</span> <span class="nav-text">垂直居中</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#visibility-hidden-opacity-0，display-none"><span class="nav-number">3.0.2.3.</span> <span class="nav-text">visibility=hidden, opacity=0，display:none</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术"><span class="nav-number">3.0.3.</span> <span class="nav-text">技术</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#sass、less"><span class="nav-number">3.0.3.1.</span> <span class="nav-text">sass、less</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器"><span class="nav-number">4.</span> <span class="nav-text">浏览器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#优化技术"><span class="nav-number">4.0.1.</span> <span class="nav-text">优化技术</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#图片预加载"><span class="nav-number">4.0.1.1.</span> <span class="nav-text">图片预加载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#懒加载"><span class="nav-number">4.0.1.2.</span> <span class="nav-text">懒加载</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP"><span class="nav-number">4.0.2.</span> <span class="nav-text">HTTP</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#http和https的基本概念"><span class="nav-number">4.0.2.1.</span> <span class="nav-text">http和https的基本概念</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#http和https的区别？"><span class="nav-number">4.0.2.2.</span> <span class="nav-text">http和https的区别？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#https协议的优点"><span class="nav-number">4.0.2.3.</span> <span class="nav-text">https协议的优点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#https协议的缺点"><span class="nav-number">4.0.2.4.</span> <span class="nav-text">https协议的缺点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TCP三次握手"><span class="nav-number">4.0.2.5.</span> <span class="nav-text">TCP三次握手</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TCP和UDP区别"><span class="nav-number">4.0.2.6.</span> <span class="nav-text">TCP和UDP区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#一个图片url访问后直接下载怎样实现？"><span class="nav-number">4.0.2.7.</span> <span class="nav-text">一个图片url访问后直接下载怎样实现？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#http-2-0"><span class="nav-number">4.0.2.8.</span> <span class="nav-text">http 2.0</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#状态码"><span class="nav-number">4.0.2.9.</span> <span class="nav-text">状态码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#fecth-发送两次请求的原因"><span class="nav-number">4.0.2.10.</span> <span class="nav-text">fecth 发送两次请求的原因</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WebScoket"><span class="nav-number">4.0.3.</span> <span class="nav-text">WebScoket</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是WebSocket"><span class="nav-number">4.0.3.1.</span> <span class="nav-text">什么是WebSocket?</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#WebSocket是什么样的协议，具体有什么优点？"><span class="nav-number">4.0.3.2.</span> <span class="nav-text">WebSocket是什么样的协议，具体有什么优点？</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cookie、sessionStorage、localStorage"><span class="nav-number">4.0.4.</span> <span class="nav-text">Cookie、sessionStorage、localStorage</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#区别"><span class="nav-number">4.0.4.1.</span> <span class="nav-text">区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Cookie如何防治XSS攻击"><span class="nav-number">4.0.4.2.</span> <span class="nav-text">Cookie如何防治XSS攻击</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#cookie-和session-的区别"><span class="nav-number">4.0.4.3.</span> <span class="nav-text">cookie 和session 的区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#一句话概括RESTful"><span class="nav-number">4.0.4.4.</span> <span class="nav-text">一句话概括RESTful</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#内存泄露-amp-amp-垃圾回收"><span class="nav-number">4.0.4.5.</span> <span class="nav-text">内存泄露  &amp;&amp;  垃圾回收</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node"><span class="nav-number">5.</span> <span class="nav-text">Node</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-number">6.</span> <span class="nav-text">算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序算法"><span class="nav-number">6.1.</span> <span class="nav-text">排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#稳定排序："><span class="nav-number">6.1.1.</span> <span class="nav-text">稳定排序：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基数排序"><span class="nav-number">6.1.1.1.</span> <span class="nav-text">基数排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#冒泡排序"><span class="nav-number">6.1.1.2.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#直接插入排序"><span class="nav-number">6.1.1.3.</span> <span class="nav-text">直接插入排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#折半插入排序"><span class="nav-number">6.1.1.4.</span> <span class="nav-text">折半插入排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#归并排序"><span class="nav-number">6.1.1.5.</span> <span class="nav-text">归并排序</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不稳定排序："><span class="nav-number">6.1.2.</span> <span class="nav-text">不稳定排序：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#快速排序"><span class="nav-number">6.1.2.1.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#希尔排序"><span class="nav-number">6.1.2.2.</span> <span class="nav-text">希尔排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#堆排序"><span class="nav-number">6.1.2.3.</span> <span class="nav-text">堆排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#直接选择排序"><span class="nav-number">6.1.2.4.</span> <span class="nav-text">直接选择排序</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue"><span class="nav-number">7.</span> <span class="nav-text">Vue</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#框架"><span class="nav-number">7.1.</span> <span class="nav-text">框架</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#对于MVVM的理解？"><span class="nav-number">7.1.0.1.</span> <span class="nav-text">对于MVVM的理解？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Vue与Angular以及React的区别？"><span class="nav-number">7.1.0.2.</span> <span class="nav-text">Vue与Angular以及React的区别？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#vue等单页面应用及其优缺点"><span class="nav-number">7.1.0.3.</span> <span class="nav-text">vue等单页面应用及其优缺点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点"><span class="nav-number">7.2.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#生命周期"><span class="nav-number">7.2.1.</span> <span class="nav-text">生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Vue的生命周期"><span class="nav-number">7.2.1.1.</span> <span class="nav-text">Vue的生命周期</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#技巧-1"><span class="nav-number">7.3.</span> <span class="nav-text">技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Vue组件间的参数传递"><span class="nav-number">7.3.0.1.</span> <span class="nav-text">Vue组件间的参数传递</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xiao Qi</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+-->
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"tagMode":false});</script></body>
+</html>
